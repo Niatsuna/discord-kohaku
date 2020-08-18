@@ -1,2 +1,2 @@
 # discord-kohaku
-Bot in Python 🐍
+Bot in Pudding 🐍
