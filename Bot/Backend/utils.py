@@ -15,7 +15,6 @@ import requests
 async def map_function(data):
     return await data[0](*data[1:])
 
-
 # > Embed
 def embed_create(title=Embed.Empty, description=Embed.Empty, fields=[], image=None, thumbnail=None, footer={'text': Embed.Empty, 'icon_url': Embed.Empty}):
     '''Creates an Embed or a list of Embeds if the given parameters exceed the limits.'''
@@ -28,6 +27,12 @@ def embed_create(title=Embed.Empty, description=Embed.Empty, fields=[], image=No
     for i in range(0, count):
         embed = Embed(  title=title if count == 1 or title == Embed.Empty else title + ' - [{}/{}]'.format(i+1,count),
                         description=description[i], color=constants.COLOR)
+        fields_ = fields[i*25:(min(i*25 + len(fields[i*25:]),(i+1)*25))]
+        for f in fields_:
+            if f[0] == None:
+                embed.add_field(name=constants.EMPTY_CHAR, value=constants.EMPTY_CHAR, inline=f[1])
+            else:
+                embed.add_field(name=f[0], value=f[1], inline=f[2])
         if thumbnail != None:
             embed.set_thumbnail(url=thumbnail)
         embed.set_footer(text=footer['text'], icon_url=footer['icon_url'])
