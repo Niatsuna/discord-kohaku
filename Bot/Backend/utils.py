@@ -12,6 +12,12 @@ import requests
 
 # > ---------------------------------------------------------------------------
 # > General
+def emote_load(key):
+    '''Loads an emote from the internal list or sends a '<key>' back if the emote was not found.'''
+    if key in constants.EMOTES.keys():
+        return constants.EMOTES[key]
+    return '<{}>'.format(key)
+
 async def map_function(data):
     return await data[0](*data[1:])
 
