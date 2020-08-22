@@ -2,6 +2,7 @@
 # > ---------------------------------------------------------------------------
 # > Imports
 from discord import Embed
+from Bot.Backend.utils import json_load
 from os import listdir
 from os.path import isfile, join
 
@@ -11,6 +12,8 @@ COGS = [f[:-3] for f in listdir('Bot/Cogs/') if isfile(join('Bot/Cogs/', f))]
 COLOR = 0x1b6c8f
 EMPTY_CHAR = '\u200b'
 INVOKE = '-'
+OWNER = json_load('Bot/Resources/json/admin.json')['owner']
+EMOTES = json_load('Bot/Resources/json/emotes.json')
 
 # > Embed
 EMBED_MAX_TITLE = 256
