@@ -19,7 +19,6 @@ async def map_function(data):
 # > Embed
 def embed_create(title=Embed.Empty, description=Embed.Empty, fields=[], image=None, thumbnail=None, footer={'text': Embed.Empty, 'icon_url': Embed.Empty}):
     '''Creates an Embed or a list of Embeds if the given parameters exceed the limits.'''
-    print(footer)
     if fields == []:
         count = 1
     else:
@@ -29,12 +28,10 @@ def embed_create(title=Embed.Empty, description=Embed.Empty, fields=[], image=No
     for i in range(0, count):
         embed = Embed(  title=title if count == 1 or title == Embed.Empty else title + ' - [{}/{}]'.format(i+1,count),
                         description=description[i], color=constants.COLOR)
-        print('>',  embed)
         if thumbnail != None:
             embed.set_thumbnail(url=thumbnail)
         embed.set_footer(text=footer['text'], icon_url=footer['icon_url'])
         embeds.append(embed)
-    print('>', embeds)
     if image != None:
         embeds[-1].set_image(url=image)
     if len(embeds) == 1:
