@@ -11,10 +11,20 @@ class EventHandler(commands.Cog):
 
     def __init__(self, client):
         self.client = client
-        self.ignore = [commands.MissingRequiredArgument, commands.CommandNotFound]
+        self.ignore = [commands.errors.MissingRequiredArgument, commands.errors.CommandNotFound]
 
     def isSecret(self):
         return True
+
+    @commands.Cog.listener()
+    async def on_message(self, message):
+        if message.author.bot:
+            return
+
+    @commands.Cog.listener()
+    async def on_ready(self):
+        await self.client.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name='{}help'.format(constants.INVOKE)))
+        utils.log('[Kohaku] Initialization complete! >>')
 
     @commands.Cog.listener()
     async def on_command_error(self, ctx, error):
@@ -26,15 +36,6 @@ class EventHandler(commands.Cog):
             return
         exc = '{}: {}'.format(type(error).__name__, error)
         raise error
-
-    @commands.Cog.listener()
-    async def on_message(self, message):
-        if message.author.bot:
-            return
-    @commands.Cog.listener()
-    async def on_ready(self):
-        await self.client.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name='{}help'.format(constants.INVOKE)))
-        utils.log('[Kohaku] Initialization complete! >>')
 
 # > ---------------------------------------------------------------------------
 def setup(client):
