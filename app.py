@@ -9,9 +9,6 @@ import Bot.Backend.constants as constants
 import sys
 import Bot.Backend.utils as utils
 
-from os import listdir
-from os.path import isfile, join
-
 # -----------------------------------------------------------------------------------------------
 # >> Variables
 client = commands.Bot(command_prefix=constants.INVOKE)
@@ -20,10 +17,8 @@ discord_token = sys.argv[1]
 
 # -----------------------------------------------------------------------------------------------
 # >> Extensions
-cog_path = 'Bot/Cogs/'
-cogs = [f[:-3] for f in listdir(cog_path) if isfile(join(cog_path, f))]
-extension_path = cog_path.replace('/','.')
-for cog in cogs:
+extension_path = 'Bot.Cogs.'
+for cog in constants.COGS:
     try:
         client.load_extension(extension_path + cog)
         utils.log('[Kohaku] Loaded extension \'{}\''.format(cog))

@@ -2,9 +2,12 @@
 # > ---------------------------------------------------------------------------
 # > Imports
 from discord import Embed
+from os import listdir
+from os.path import isfile, join
 
 # > ---------------------------------------------------------------------------
 # > General
+COGS = [f[:-3] for f in listdir('Bot/Cogs/') if isfile(join('Bot/Cogs/', f))]
 COLOR = 0x1b6c8f
 INVOKE = '-'
 
@@ -19,6 +22,10 @@ ERROR_MISSIM_PARAM      = Embed(description='Please give me something to work wi
 ERROR_PERMISSION_DENIED = Embed(description='You are not allowed to do that.', color=COLOR)
 ERROR_SEARCH_FAIL       = Embed(description='Couldn\'t find what you are looking for! Please check your spelling or try `{}help` for further information.'.format(INVOKE), color=COLOR)
 ERROR_WHOOPS            = Embed(description='Whooops! Something went totally wrong! Please contact an admin!', color=COLOR)
+
+# > GitHub
+GITHUB_URL_CODE = 'https://github.com/Niatsuna/discord-kohaku'
+GITHUB_URL_BOARD = 'https://github.com/Niatsuna/discord-kohaku/projects/1'
 
 # > Cog : Animal Crossing New Horizons
 AC_REST_API = 'https://acnhapi.com/v1/'
