@@ -19,16 +19,22 @@ async def map_function(data):
 # > Embed
 def embed_create(title=Embed.Empty, description=Embed.Empty, fields=[], image=None, thumbnail=None, footer={'text': Embed.Empty, 'icon_url': Embed.Empty}):
     '''Creates an Embed or a list of Embeds if the given parameters exceed the limits.'''
-    count = math.ceil(len(fields)/constants.EMBED_MAX_FIELD)
+    print(footer)
+    if fields == []:
+        count = 1
+    else:
+        count = math.ceil(len(fields)/constants.EMBED_MAX_FIELD)
     description = [description] + [Embed.Empty] * (count-1)
     embeds = []
     for i in range(0, count):
         embed = Embed(  title=title if count == 1 or title == Embed.Empty else title + ' - [{}/{}]'.format(i+1,count),
                         description=description[i], color=constants.COLOR)
+        print('>',  embed)
         if thumbnail != None:
             embed.set_thumbnail(url=thumbnail)
         embed.set_footer(text=footer['text'], icon_url=footer['icon_url'])
-        embeds.append(embeds)
+        embeds.append(embed)
+    print('>', embeds)
     if image != None:
         embeds[-1].set_image(url=image)
     if len(embeds) == 1:
@@ -37,12 +43,15 @@ def embed_create(title=Embed.Empty, description=Embed.Empty, fields=[], image=No
 
 async def embed_send(ctx, embed, file=None):
     '''Sends the Embed or a list of Embeds to the given channel in the context.'''
-    if isinstance(embed, Embed.__class__):
+    if isinstance(embed, Embed):
         await ctx.message.channel.send(embed=embed, file=file)
     else:
-        for e in embed[:-1]:
-            await ctx.message.channel.send(embed=e)
-        await ctx.message.channel.send(embed=embed[-1], file=file)
+        if isinstance(file, list) and len(file) < len(embed):
+            file = file + [None] * (len(embed) - len(file))
+        elif not isinstance(file, list):
+            file = [file] * len(embed)
+        for i in range(0, len(embed)):
+            await ctx.message.channel.send(embed=embed[i], file=file[i])
 
 # > Image
 filters = {1 : Image.NEAREST, 2 : Image.BOX, 3 : Image.BILINEAR, 4 : Image.HAMMING, 5 : Image.BICUBIC, 6 : Image.LANCZOS}
