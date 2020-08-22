@@ -9,6 +9,7 @@ from os.path import isfile, join
 # > General
 COGS = [f[:-3] for f in listdir('Bot/Cogs/') if isfile(join('Bot/Cogs/', f))]
 COLOR = 0x1b6c8f
+EMPTY_CHAR = '\u200b'
 INVOKE = '-'
 
 # > Embed
