@@ -14,7 +14,6 @@ class Help(commands.Cog):
     def __init__(self, client):
         self.client = client
         self.cmds = {}
-        self.owner = utils.json_load('Bot/Resources/json/admin.json')['owner']
 
     def shortDescription_default(self):
         return '**Under Construction**'
