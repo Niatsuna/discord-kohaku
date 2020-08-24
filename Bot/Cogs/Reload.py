@@ -65,6 +65,7 @@ class Reload(commands.Cog):
                             utils.warn('> [Reload] Failed to reload extension {}\n{}'.format(r[0], type(ex).__name__))
                             success.append(False)
             else:
+                utils.warn('> [Reload] Couldn\'t found {}. Maybe it\'s a hidden command.'.format(tr))
                 success.append(False)
         fail = len(list(filter(lambda x: not x, success)))
         succ = len(list(filter(lambda x: x, success)))
