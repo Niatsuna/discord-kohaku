@@ -133,7 +133,7 @@ def json_load_url(url):
 
 def json_store(local_path, json_content):
     '''Stores the given content at the given path.'''
-    with open(local_path, 'w') as f:
+    with open(local_path, 'w', encoding="utf-8") as f:
         f.write(json.dumps(json_content, ensure_ascii=False, indent=4))
 
 # > Logger
