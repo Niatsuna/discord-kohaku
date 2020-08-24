@@ -14,6 +14,7 @@ EMPTY_CHAR = '\u200b'
 INVOKE = '-'
 OWNER = json_load('Bot/Resources/json/admin.json')['owner']
 EMOTES = json_load('Bot/Resources/json/emotes.json')
+GIFS = json_load('Bot/Resources/json/gifs.json')
 
 # > Embed
 EMBED_MAX_TITLE = 256
