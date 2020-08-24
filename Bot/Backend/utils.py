@@ -117,8 +117,11 @@ def image_to_file(image):
 # > JSON
 def json_load(local_path):
     '''Loads the content of a local stored json file at the given path.'''
-    with open(local_path, 'r', encoding='utf-8') as f:
-        return json.load(f)
+    try:
+        with open(local_path, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    except:
+        return None
 
 def json_load_url(url):
     '''Loads the content of a remote stored json file (API).'''
