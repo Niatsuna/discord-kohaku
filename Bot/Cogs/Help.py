@@ -27,7 +27,7 @@ class Help(commands.Cog):
     def longDescription(self):
         title='Help'
         desc = 'I was written in {} by <@!{}>.\nLook at my [spaghetti code]({}) and [my upcoming features]({})!\n\n_For more infos regarding one module, use `{}help <module>`_\n\n_**Modules:**_'.format(
-            utils.emote_load('python'), self.owner, constants.GITHUB_URL_CODE, constants.GITHUB_URL_BOARD, constants.INVOKE)
+            utils.emote_load('python'), constants.OWNER, constants.GITHUB_URL_CODE, constants.GITHUB_URL_BOARD, constants.INVOKE)
         modules = sorted(self.cmds.items(), key=(lambda  x: x[0]))
         fields = []
         for (cmd, cog) in modules:
