@@ -18,6 +18,7 @@ class Update(commands.Cog):
             'fgo': fgo,
             'pkm': pkm
         }
+        self.update_all()
 
     def isSecret(self):
         return True
@@ -34,6 +35,17 @@ class Update(commands.Cog):
                 await utils.embed_send(ctx, constants.ERROR_WHOOPS)
         else:
             await utils.embed_send(ctx, constants.ERROR_SEARCH_FAIL)
+
+    def update_all(self):
+        for (k,v) in self.scripts.items():
+            try:
+                if utils.json_load(v.PATH) == None:
+                    v.update()
+                    utils.log('> [Update] Updated during start: {}'.format(k))
+                else:
+                    utils.log('> [Update] Skipped updating at start: {}'.format(k))
+            except Exception as ex:
+                utils.warn('> [Update] Error during Update: {} | {}'.format(k ,ex))
 
     @update.error
     async def error_update(self, ctx, error):
