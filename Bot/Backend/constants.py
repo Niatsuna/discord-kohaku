@@ -51,3 +51,6 @@ NHIE_URL = 'http://www.neverhaveiever.org'
 PKM_REST_API = 'https://pokeapi.co/api/v2/'
 PKM_WIKI_URL_DE = 'https://www.pokewiki.de/'
 PKM_WIKI_URL_EN = 'https://www.pokemon.com/us/pokedex/'
+
+# > Cog : Would you rather
+WYR_URL = 'http://either.io/{}'
