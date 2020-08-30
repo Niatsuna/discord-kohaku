@@ -32,13 +32,14 @@ Use
 ```
 python app.py $DISCORD_TOKEN
 ```
-to start Kohaku. After that Kohaku is loading, loggin into the bot account based on the token and informes you when it's ready. Have fun!
+to start Kohaku. After that Kohaku is loading, loggin into the bot account based on the token and informs you when it's ready. Have fun!
+Thanks to @fwcd Docker Deployment is possible! (Thank you very much <3)
 
 ### Usage
 **DISCLAIMER:** Because this is a hobby project and open-source you are free to use Kohaku as you like but it's your responsibility! This code is not bug-free or perfect. So if anything might happend and you didn't wanted that: Sorry bud, but that's on you. We are happy to help but i will not be your scapegoat. For anything else read the [GPU License](LICENSE.md).
 
 <br><br>
-The prefix for Kohaku is defined in `utils.py` in the Backend Folder. On default it is `-` but can be changed before running.
+The prefix for Kohaku is defined in `constants.py` in the Backend Folder. On default it is `-` but can be changed before running.
 To use Kohaku type the prefix , the module and then other parameters.<br>
 `-help` will show you a help message and goes into more detail. <br>
 **Example:**<br>
@@ -80,8 +81,9 @@ To these awesome people that are testing Kohaku for free:<br>
 <br>
 <i align="center" style="font-size: .85em">Source: Anime "Anima Yell!"</i>
 
-* Nariax3
+* Nariax3 (Stuff i was too lazy to do)
 * Lirby
-* Awesome people from the IT-Server
-* Awesome people from the Johann25-Server °L°
+* fwcd (Docker Stuff)
+* Awesome people from THE IT-Server
+* Awesome people from the Johann25-Server °L° (Check JohannaBDK out! Awesome streams & Co :D)
 * Many more !
