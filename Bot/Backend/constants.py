@@ -44,6 +44,9 @@ DBD_WIKI_URL = 'https://deadbydaylight.gamepedia.com/'
 FGO_REST_API = 'https://api.atlasacademy.io/nice/NA/'
 FGO_WIKI_URL = 'https://grandorder.wiki/'
 
+# > Cog : Never Have I Ever
+NHIE_URL = 'http://www.neverhaveiever.org'
+
 # > Cog : Pokémon
 PKM_REST_API = 'https://pokeapi.co/api/v2/'
 PKM_WIKI_URL_DE = 'https://www.pokewiki.de/'
