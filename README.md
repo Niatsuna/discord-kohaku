@@ -60,7 +60,7 @@ Entries marked with an  :no_entry_sign: are currently not available but planned.
 * Would you rather - `wyr`  :no_entry_sign:
 * Never have i ever - `nhie`  :no_entry_sign:
 * Hangman - `hangman` :no_entry_sign:
-* Magic 8Ball - `8b`  :no_entry_sign:
+* Magic 8Ball - `8b`
 
 ### Game Information
 * Animal Crossing : New Horizons - `ac` :no_entry_sign:
