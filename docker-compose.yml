@@ -1,0 +1,8 @@
+version: "3"
+
+services:
+  kohaku:
+    build: .
+    restart: on-failure
+    environment:
+      - BOT_TOKEN
