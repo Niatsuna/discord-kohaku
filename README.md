@@ -58,7 +58,7 @@ Entries marked with an  :no_entry_sign: are currently not available but planned.
 
 ### Discord Games
 * Would you rather - `wyr`  :no_entry_sign:
-* Never have i ever - `nhie`  :no_entry_sign:
+* Never have i ever - `nhie`
 * Hangman - `hangman` :no_entry_sign:
 * Magic 8Ball - `8b`
 
