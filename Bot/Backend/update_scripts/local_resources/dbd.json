@@ -327,9 +327,56 @@
         "Red Herring": "Ablenkungsmanöver",
         "For the People": "Für das Volk"
     },
-    "default" : "(?)",
-    "default-image-surv" : "https://cdn.discordapp.com/attachments/626462024913911818/747596761710985347/default-surv.webp",
-    "default-image-kill" : "https://cdn.discordapp.com/attachments/626462024913911818/747596755788496916/default-killer.webp",
-    "default-image-perk" : "https://cdn.discordapp.com/attachments/191341481242525696/747605087420940288/No_Perk_no_es_here.png",
-    "default-image-offering" : "https://cdn.discordapp.com/attachments/191341481242525696/747598229201354762/No_Offering_no_es_here.png"
+    "default-survivor" : {
+        "displayName" : "(?)",
+        "fullName" : null,
+        "gender" : "(?)",
+        "nationality" : "(?)",
+        "role" : "(?)",
+        "dlc" : "(?)",
+        "difficulty" : "(?)",
+        "perks" : [],
+        "biography" : "(?)",
+        "url" : null,
+        "image" : "https://cdn.discordapp.com/attachments/626462024913911818/747596761710985347/default-surv.webp"
+    },
+    "default-killer" : {
+        "displayName" : "(?)",
+        "displayName_de" : "(?)",
+        "fullName" : "(?)",
+        "alias" : [],
+        "gender" : "(?)",
+        "nationality" : "(?)",
+        "height" : "(?)",
+        "realm" : "(?)",
+        "dlc" : "(?)",
+        "power" : "(?)",
+        "weapon" : "(?)",
+        "speed" : "(?)",
+        "terror_radius" : "(?)",
+        "difficulty" : "(?)",
+        "perks" : [],
+        "biography" : "(?)",
+        "url" :  null,
+        "image" : "https://cdn.discordapp.com/attachments/626462024913911818/747596755788496916/default-killer.webp"
+    },
+    "default-perk" : {
+        "displayName" : "(?)",
+        "displayName_de" : "(?)",
+        "description" : "(?)",
+        "isTeachable" : false,
+        "teachableInfo" : {
+            "character" : null,
+            "lvl" : -1
+        },
+        "url" : null,
+        "image" : "https://cdn.discordapp.com/attachments/191341481242525696/747605087420940288/No_Perk_no_es_here.png"
+    },
+    "default-offering" : {
+        "displayName" : "(?)",
+        "displayName_de" : "(?)",
+        "description" : "(?)",
+        "url" : null,
+        "image" : "https://cdn.discordapp.com/attachments/191341481242525696/747598229201354762/No_Offering_no_es_here.png"
+    }
 }

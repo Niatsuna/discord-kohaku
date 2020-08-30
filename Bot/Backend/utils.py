@@ -18,7 +18,10 @@ def emote_load(key):
         return constants.EMOTES[key]
     return '<{}>'.format(key)
 
-async def map_function(data):
+def map_function(data):
+    return data[0](*data[1:])
+
+async def map_function_async(data):
     return await data[0](*data[1:])
 
 # > Embed

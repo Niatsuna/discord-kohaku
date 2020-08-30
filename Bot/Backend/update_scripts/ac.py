@@ -2,13 +2,16 @@ import Bot.Backend.constants as constants
 import Bot.Backend.utils as utils
 import requests
 import json
+from concurrent.futures import ThreadPoolExecutor
 
 PATH = 'Bot/Resources/json/animalcrossing.json'
-API = constants.AC_REST_API
 
-def fishs(result, api):
+API = {}
+LOCAL = utils.json_load('Bot/Backend/update_scripts/local_resources/ac.json')
+
+def fishs(result):
     fish_result = []
-    for v in list(api.values()):
+    for v in list(API['fish'].values()):
         fish = {}
         fish['name'] = v['name']['name-USen'].capitalize()
         fish['name_de'] = v['name']['name-EUde'].capitalize()
@@ -30,7 +33,7 @@ def fishs(result, api):
 
 def sea(result, api):
     sea_result = []
-    for v in list(api.values()):
+    for v in list(API['sea'].values()):
         sea = {}
         sea['name'] = v['name']['name-USen'].capitalize()
         sea['name_de'] = v['name']['name-EUde'].capitalize()
@@ -49,9 +52,9 @@ def sea(result, api):
         sea_result.append(sea)
     result['sea creatures'] = sea_result
 
-def bugs(result, api):
+def bugs(result):
     bug_result = []
-    for v in list(api.values()):
+    for v in list(API['bugs'].values()):
         bug = {}
         bug['name'] = v['name']['name-USen'].capitalize()
         bug['name_de'] = v['name']['name-EUde'].capitalize()
@@ -70,9 +73,9 @@ def bugs(result, api):
         bug_result.append(bug)
     result['bugs'] = bug_result
 
-def fossils(result, api):
+def fossils(result):
     fossil_result= []
-    for v in list(api.values()):
+    for v in list(API['fossils'].values()):
         foss = {}
         foss['name'] = v['name']['name-USen'].capitalize()
         foss['name_de'] = v['name']['name-EUde'].capitalize()
@@ -83,9 +86,9 @@ def fossils(result, api):
         fossil_result.append(foss)
     result['fossils'] = fossil_result
 
-def villagers(result, api):
+def villagers(result):
     villager_result = []
-    for v in list(api.values()):
+    for v in list(API['villagers'].values()):
         vill = {}
         vill['name'] = v['name']['name-USen']
         vill['name_de'] = v['name']['name-EUde']
@@ -110,9 +113,9 @@ def villagers(result, api):
         villager_result.append(vill)
     result['villagers'] = villager_result
 
-def song(result, api):
+def song(result):
     song_result = []
-    for v in list(api.values()):
+    for v in list(API['songs'].values()):
         song = {}
         song['name'] = v['name']['name-USen'].capitalize()
         song['name_de'] = v['name']['name-EUde'].capitalize()
@@ -121,9 +124,9 @@ def song(result, api):
         song_result.append(song)
     result['songs'] = song_result
 
-def items(result, local, api_hw, api_wm, api_mc):
+def items(result):
     items_result = []
-    for v in (list(api_hw.values()) + list(api_wm.values()) + list(api_mc.values())):
+    for v in (list(API['houseware'].values()) + list(API['wallmounted'].values()) + list(API['misc'].values())):
         item = {}
         item['variants'] = len(v)
         v = v[0]
@@ -132,10 +135,10 @@ def items(result, local, api_hw, api_wm, api_mc):
         item['size'] = v['size']
         item['price'] = [v['buy-price'], v['sell-price']]
         if v['isDIY']:
-            if item['name'].lower() in local['diy'].keys():
-                diy = local['diy'][item['name'].lower()]
+            if item['name'].lower() in LOCAL['diy'].keys():
+                diy = LOCAL['diy'][item['name'].lower()]
             else:
-                diy = local['default-diy']
+                diy = LOCAL['default-diy']
         else:
             diy = []
         item['DIY'] = diy
@@ -144,17 +147,12 @@ def items(result, local, api_hw, api_wm, api_mc):
     result['items'] = items_result
 
 def update():
-    api = {'fishs' : utils.json_load_url(API + 'fish'), 'sea creatures' : utils.json_load_url(API + 'sea'), 'bugs' : utils.json_load_url(API + 'bugs'),
-    'fossils' : utils.json_load_url(API + 'fossils'), 'villagers' : utils.json_load_url(API + 'villagers'), 'song' : utils.json_load_url(API + 'songs'),
-    'items-houseware' : utils.json_load_url(API + 'houseware'), 'items-wallmounted' : utils.json_load_url(API + 'wallmounted'), 'items-misc' : utils.json_load_url(API + 'misc')}
-    local = utils.json_load('Bot/Backend/update_scripts/local_resources/ac.json')
-    j = {}
-    fishs(j, api['fishs'])
-    sea(j, api['sea creatures'])
-    bugs(j, api['bugs'])
-    fossils(j, api['fossils'])
-    villagers(j, api['villagers'])
-    song(j, api['song'])
-    items(j, local, api['items-houseware'], api['items-wallmounted'], api['items-misc'])
-    j['art'] = local['art']
-    utils.json_store(PATH, j)
+    api_key = ['fish', 'sea', 'bugs', 'fossils', 'villagers', 'songs', 'houseware', 'wallmounted', 'misc']
+    for key in api_key:
+        API[key] = utils.json_load_url(constants.AC_REST_API + key)
+    functions = [fishs, sea, bugs, fossils, villagers, song, items]
+    result = {}
+    with ThreadPoolExecutor(max_workers=len(functions)) as executor:
+        executor.map(utils.map_function, [[func, result] for func in functions])
+    result['art'] = LOCAL['art']
+    utils.json_store(PATH, result)
