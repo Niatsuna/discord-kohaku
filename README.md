@@ -57,7 +57,7 @@ Kohaku is specialized for little discord games and information about third-party
 Entries marked with an  :no_entry_sign: are currently not available but planned.
 
 ### Discord Games
-* Would you rather - `wyr`  :no_entry_sign:
+* Would you rather - `wyr`
 * Never have i ever - `nhie`
 * Hangman - `hangman` :no_entry_sign:
 * Magic 8Ball - `8b`
