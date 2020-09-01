@@ -82,7 +82,7 @@ def json_survivor(api):
         for k in survivor.keys():
             for row in infobox[2:]:
                 cols = row.find_all('td')
-                if cols[0].text.lower() == 'Alt. Name' and survivor['fullName'] == None:
+                if cols[0].text.lower() == 'alt. name' and survivor['fullName'] == None:
                     survivor['fullName'] = cols[1].text.replace('\n', ' ').strip() # Laurie Strode == Cynthia Myers
                 elif k in cols[0].text.lower():
                     survivor[k] = cols[1].text.replace('\n', ' ').strip()
@@ -118,11 +118,11 @@ def json_offerings(result):
     off_result = []
     for v in list(API['offerings'].values()):
         off = deepcopy(LOCAL['default-offering'])
-        off['displayName'] = v['displayName']
+        off['displayName'] = v['displayName'].replace('’','\'')
         off['description'] = cleanup(v['description'])
         for k in key_add:
             if off['displayName'] + k in LOCAL['offerings'].keys():
-                off['displayName_de'] = off['displayName'] + k
+                off['displayName_de'] = LOCAL['offerings'][off['displayName'] + k]
                 break
         if 'iconPathList' in v.keys():
             off['image'] = DATA_URL + v['iconPathList'][0]
@@ -134,7 +134,7 @@ def json_perks(result):
     perk_result = []
     for v in list(API['perks'].values()):
         perk = deepcopy(LOCAL['default-perk'])
-        perk['displayName'] = v['displayName']
+        perk['displayName'] = v['displayName'].replace('’','\'')
         if perk['displayName'] in LOCAL['perks'].keys():
             perk['displayName_de'] = LOCAL['perks'][perk['displayName']]
         desc = cleanup(v['perkDefaultDescription']) if v['perkDefaultDescription'] != '' else cleanup(v['perkLevel3Description'])

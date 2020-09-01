@@ -2,63 +2,63 @@
     "offerings": [
         {
             "displayName": "Damaged Photo",
-            "displayName_de": "Damaged Photo",
+            "displayName_de": "Beschädigtes Foto",
             "description": "Tremendously increases the chance to be sent to Ormond when burnt.\n\nAug. 28th, ‘96\n“A dormant darkness lies beneath his childlike smile, about to be awaken.”",
             "url": "https://deadbydaylight.gamepedia.com/Damaged_Photo",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/Kenya/iconFavors_damagedPhoto.png"
         },
         {
             "displayName": "Harvest Festival Leaflet",
-            "displayName_de": "Harvest Festival Leaflet",
+            "displayName_de": "Erntedankfest-Flyer",
             "description": "Slightly increases the chances of being sent to Haddonfield when burnt.\nStacks.\n\"A washed out informational leaflet for the '78 Haddonfield Harvest Festival. A large cartoon pumpkin is depicted on the front.\"",
             "url": "https://deadbydaylight.gamepedia.com/Harvest_Festival_Leaflet",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/DLC2/iconFavors_harvestFestivalLeaflet.png"
         },
         {
             "displayName": "Escape! Cake",
-            "displayName_de": "Escape! Cake (Personal)",
+            "displayName_de": "Kuchen der Flucht",
             "description": "Grants 100% bonus Bloodpoints in all categories.\nPersonal.Stacks.\n\"This picture of a cake sure is real.\"",
             "url": "https://deadbydaylight.gamepedia.com/Escape!_Cake",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/Anniversary/iconFavors_escapeCake.png"
         },
         {
-            "displayName": "Mary’s Letter",
-            "displayName_de": "(?)",
+            "displayName": "Mary's Letter",
+            "displayName_de": "Marys Brief",
             "description": "Tremendously increases the chance to be sent to Midwich Elementary School when burnt.\n\"In my restless dreams, I see that town.\"",
-            "url": "https://deadbydaylight.gamepedia.com/Mary’s_Letter",
+            "url": "https://deadbydaylight.gamepedia.com/Mary's_Letter",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/Wales/iconFavors_marysLetter.png"
         },
         {
             "displayName": "Petrified Oak",
-            "displayName_de": "Petrified Oak",
+            "displayName_de": "Versteinerte Eiche",
             "description": "Calms The Entity and Slightly increases the distance between sacrificial hooks appearing in the world.\nStacks.\n\"A deteriorating piece of petrified wood.\"",
             "url": "https://deadbydaylight.gamepedia.com/Petrified_Oak",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_petrifiedOak.png"
         },
         {
             "displayName": "Dusty Noose",
-            "displayName_de": "Dusty Noose",
+            "displayName_de": "Staubige Schlinge",
             "description": "Tremendously increases the chance to be sent to Grave of Glenvale when burnt.\n“Ask anyone trying to survive on this dust-choked land and they'll tell you what a noose really is—a damn mercy.”",
             "url": "https://deadbydaylight.gamepedia.com/Dusty_Noose",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/Ukraine/iconFavors_dustyNoose.png"
         },
         {
             "displayName": "Primrose Blossom Sachet",
-            "displayName_de": "Primrose Blossom Sachet (Personal)",
+            "displayName_de": "Primelblütenduftkissen",
             "description": "Grants 50% bonus Bloodpoints in the Altruism category.\nPersonal.Stacks.\n\"A palm-sized hand-sewn sachet containing 4 gold petals. The primrose opens at the very last moment before the sun gives place to the night.\"",
             "url": "https://deadbydaylight.gamepedia.com/Primrose_Blossom_Sachet",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_primroseBlossomSachet.png"
         },
         {
             "displayName": "Shrike Wreath",
-            "displayName_de": "Shrike Wreath (Personal)",
+            "displayName_de": "Würgerkranz",
             "description": "Grants 50% bonus Bloodpoints in the Sacrifice category.\nStacks.\n\"Crafted out of sticks, strings and bones, this wreath calls on The Entity's blessing for more blood.\"",
             "url": "https://deadbydaylight.gamepedia.com/Shrike_Wreath",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_shrikeWreath.png"
         },
         {
             "displayName": "Fuming Cordage",
-            "displayName_de": "Fuming Cordage",
+            "displayName_de": "Dampfendes Tauwerk",
             "description": "Slightly increases the chances of being sent to Backwater Swamp when burnt.\nStacks.\n\"A burnt piece of marine rope still emitting a warm smoke.\"",
             "url": "https://deadbydaylight.gamepedia.com/Fuming_Cordage",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/DLC3/iconFavors_fumingCordage.png"
@@ -79,133 +79,133 @@
         },
         {
             "displayName": "Red Envelope",
-            "displayName_de": "Red Envelope",
+            "displayName_de": "Roter Umschlag",
             "description": "Calls upon The Entity to generate 1 Lunar Vessel.As a Killer, hook a Survivor to corrupt the Vessels in the trial and make them temporarily destructible. Destroying a Vessel earns Moonrise progress and bonus Bloodpoints.As a Survivor, take and escape the trial with a Vessel to earn Moonrise progress and bonus Bloodpoints.Only playable during The Moonrise Event.Completing the Moonrise event will earn you Golden Coins for use in the Store.NOTE: During the event, 2 default Lunar Vessels will spawn in the map.Stacks.\n\"The Red Envelope is filled with crisp, new bills that bring luck and happiness.\"",
             "url": "https://deadbydaylight.gamepedia.com/Red_Envelope",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/LunarNewYear/iconFavors_redMoneyPacket.png"
         },
         {
             "displayName": "Salt Pouch",
-            "displayName_de": "Salt Pouch",
+            "displayName_de": "Salzbeutel",
             "description": "Slightly increases luck of all Survivors.\nStacks.\n\"A small cotton pouch filled with black salt crystals. Some believe it brings good fortune. Don't spill it.\"",
             "url": "https://deadbydaylight.gamepedia.com/Salt_Pouch",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_saltPouch.png"
         },
         {
             "displayName": "Sweet William Sachet",
-            "displayName_de": "Sweet William Sachet (Personal)",
+            "displayName_de": "Bartnelkenduftkissen",
             "description": "Grants 50% bonus Bloodpoints in the Boldness category.\nPersonal.Stacks.\n\"A palm-sized hand-sewn sachet containing a mix of pale petals and glaucous bluish leaves. Releases a strong spicy, clove-like scent.\"",
             "url": "https://deadbydaylight.gamepedia.com/Sweet_William_Sachet",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_sweetWilliamSachet.png"
         },
         {
             "displayName": "Cypress Memento Mori",
-            "displayName_de": "Cypress Memento Mori",
+            "displayName_de": "Memento Mori aus Zypressenholz",
             "description": "Grants the ability to kill the last survivor by your hand during the next trial.\nSecret.\n\"You worked well, the last one is yours.\"",
             "url": "https://deadbydaylight.gamepedia.com/Cypress_Memento_Mori",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_momentoMoriCypress.png"
         },
         {
             "displayName": "Rotten Oak",
-            "displayName_de": "Rotten Oak",
+            "displayName_de": "Morsche Eiche",
             "description": "Calls upon The Entity to Moderately decrease the distance between sacrificial hooks appearing in the world.\nStacks.\n\"A decomposing piece of oak in which strange markings have been etched.\"",
             "url": "https://deadbydaylight.gamepedia.com/Rotten_Oak",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_rottenOak.png"
         },
         {
             "displayName": "Jigsaw Piece",
-            "displayName_de": "Jigsaw Piece",
+            "displayName_de": "Puzzleteil",
             "description": "Tremendously increases the chances of being sent to Gideon Meat Packing Plant when burnt.\n\"Congratulations. You are still alive. Most people are so ungrateful to be alive. But not you. Not anymore.\"",
             "url": "https://deadbydaylight.gamepedia.com/Jigsaw_Piece",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/Finland/iconFavors_jigsawPiece.png"
         },
         {
             "displayName": "Lunacy Ticket",
-            "displayName_de": "Lunacy Ticket",
+            "displayName_de": "Irrsinnsticket",
             "description": "Slightly increases the chances of being sent to Crotus Prenn Asylum when burnt.\nStacks.\n\"A worn and faded-out ticket of paper with unreadable information.\"",
             "url": "https://deadbydaylight.gamepedia.com/Lunacy_Ticket",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_lunacyTicket.png"
         },
         {
             "displayName": "Vigo's Shroud",
-            "displayName_de": "Vigo's Shroud",
+            "displayName_de": "Vigos Leichentuch",
             "description": "You start the trial as far as possible from the Killer.\nSecret.\n\"I found marvels through the years in The Fog, but only now do I understand how to bend The Fog's irrefragable rules.\" -Vigo's Journal",
             "url": "https://deadbydaylight.gamepedia.com/Vigo's_Shroud",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_vigosShroud.png"
         },
         {
             "displayName": "MacMillan Ledger Page",
-            "displayName_de": "MacMillan Ledger Page",
+            "displayName_de": "MacMillan Kassenbuchseite",
             "description": "Slightly increases the chances of being sent to the MacMillan Estate when burnt.\nStacks.\n\"A torn and faded-out ledger page with unreadable information except for the MacMillan stamp.\"",
             "url": "https://deadbydaylight.gamepedia.com/MacMillan_Ledger_Page",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_macmillianLedgerPage.png"
         },
         {
             "displayName": "Bound Envelope",
-            "displayName_de": "Bound Envelope (All Survivors)",
+            "displayName_de": "Gebundener Umschlag",
             "description": "Grants 25% bonus Bloodpoints in all categories to all Survivors.\nStacks.\n\"An opened envelope re-sealed and bound with 4 colored ribbons.\"",
             "url": "https://deadbydaylight.gamepedia.com/Bound_Envelope",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_boundEnvelope.png"
         },
         {
             "displayName": "Bloody Party Streamers",
-            "displayName_de": "Bloody Party Streamers (All Players)",
+            "displayName_de": "Blutige Partyluftschlangen",
             "description": "Grants 100% bonus Bloodpoints in all categories for all players this trial.\nStacks\n\"A reminder of a bloody good time when people came together, but left screaming.\"",
             "url": "https://deadbydaylight.gamepedia.com/Bloody_Party_Streamers",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/Anniversary/iconFavors_bloodyPartyStreamers.png"
         },
         {
             "displayName": "Pustula Petals",
-            "displayName_de": "Pustula Petals",
+            "displayName_de": "Pusteblume",
             "description": "Calls upon The Entity to generate 1 Blighted Hook and 1 Blighted Generator.As a Killer, hook a Survivor on a Blighted Hook for the first time to earn bonus Bloodpoints.As a Survivor, find and repair a Blighted Generator to earn bonus Bloodpoints.Using this offering increases the amount of Bloodpoints earned for these interactions.NOTE: During the event, 1 default Blighted Hook and 1 default Blighted Generator will spawn in the map.Stacks.Only playable during the Withering Blight Event.\n\"The pustulas fill the air with a rancid odor that some may find enticing.\"",
             "url": "https://deadbydaylight.gamepedia.com/Pustula_Petals",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/Halloween/iconFavors_pustulaPetals.png"
         },
         {
             "displayName": "Sealed Envelope",
-            "displayName_de": "Sealed Envelope (Personal)",
+            "displayName_de": "Versiegelter Umschlag",
             "description": "Grants 25% bonus Bloodpoints in all categories.\nPersonal.Stacks.\n\"An unaddressed and unopened envelope yellowed by time. Its message will never be known.\"",
             "url": "https://deadbydaylight.gamepedia.com/Sealed_Envelope",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_sealedEnvelope.png"
         },
         {
             "displayName": "Fresh Crispleaf Amaranth",
-            "displayName_de": "Fresh Crispleaf Amaranth (Personal)",
+            "displayName_de": "Frischer Fuchsschwanz",
             "description": "Grants 75% bonus Bloodpoints in the Survival category.\nPersonal.Stacks.\n\"The pale green leaves are highlighted with peculiar crimson veins. Amaranth is said to be everlasting.\"",
             "url": "https://deadbydaylight.gamepedia.com/Fresh_Crispleaf_Amaranth",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_freshCrispleafAmaranth.png"
         },
         {
             "displayName": "Hollow Shell",
-            "displayName_de": "Hollow Shell (Personal)",
+            "displayName_de": "Leere Muschelschale",
             "description": "Grants 25% bonus Bloodpoints in all categories.\nStacks.\n\"An unidentifiable cocoon which was breached by whatever was inside.\"",
             "url": "https://deadbydaylight.gamepedia.com/Hollow_Shell",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_hollowShell.png"
         },
         {
             "displayName": "Cut Coin",
-            "displayName_de": "Cut Coin",
+            "displayName_de": "Gekappte Münze",
             "description": "Calls on The Entity to prevent the appearance of 2 chests.\nStacks.\n\"Two halves of a thick metallic coin.\"",
             "url": "https://deadbydaylight.gamepedia.com/Cut_Coin",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_cutCoin.png"
         },
         {
             "displayName": "Faint Reagent",
-            "displayName_de": "Faint Reagent",
+            "displayName_de": "Mattes Reagenzglas",
             "description": "Slightly thickens the Dark Mist.\nStacks.\n\"Paralyzed, I stand in the cold as death lingers.\"",
             "url": "https://deadbydaylight.gamepedia.com/Faint_Reagent",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_faintReagent.png"
         },
         {
             "displayName": "Fragrant Sweet William",
-            "displayName_de": "Fragrant Sweet William (Personal)",
+            "displayName_de": "Wohlriechende Bartnelke",
             "description": "Grants 100% bonus Bloodpoints in the Boldness category.\nPersonal.Stacks.\n\"A bunch of flowers with pink petals and a blood red core. Releases a strong spicy, clove-like scent.\"",
             "url": "https://deadbydaylight.gamepedia.com/Fragrant_Sweet_William",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_fragrantSweetWilliam.png"
         },
         {
             "displayName": "Ardent Raven Wreath",
-            "displayName_de": "Ardent Raven Wreath (Personal)",
+            "displayName_de": "Inbrünstiger Rabenkranz",
             "description": "Grants 100% bonus Bloodpoints in the Deviousness category.\nStacks.\n\"Crafted with a fiery, undying passion out of blackened branches and coals, this wreath calls on The Entity's blessing for more blood.\"",
             "url": "https://deadbydaylight.gamepedia.com/Ardent_Raven_Wreath",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_ardentRavenWreath.png"
@@ -219,28 +219,28 @@
         },
         {
             "displayName": "Fragrant Bog Laurel",
-            "displayName_de": "Fragrant Bog Laurel (Personal)",
+            "displayName_de": "Wohlriechende Lorbeerrosen",
             "description": "Grants 100% bonus Bloodpoints in the Objective category.\nPersonal.Stacks.\n\"A beautiful purple flower that grows in the midst of the tainted swamp. Releases a strong tea-like aroma.\"",
             "url": "https://deadbydaylight.gamepedia.com/Fragrant_Bog_Laurel",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_fragrantBogLaurel.png"
         },
         {
             "displayName": "Survivor Pudding",
-            "displayName_de": "Survivor Pudding (Personal)",
+            "displayName_de": "Pudding des Überlebenden",
             "description": "Grants 100% bonus Bloodpoints in all categories.\nPersonal.Stacks.\n\"A heavily salted pudding…\"",
             "url": "https://deadbydaylight.gamepedia.com/Survivor_Pudding",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/Anniversary/iconFavors_survivorPudding.png"
         },
         {
             "displayName": "Crispleaf Amaranth Sachet",
-            "displayName_de": "Crispleaf Amaranth Sachet (Personal)",
+            "displayName_de": "Fuchsschwanzduftkissen",
             "description": "Grants 50% bonus Bloodpoints in the Survival category.\nPersonal.Stacks.\n\"A palm-sized hand-sewn sachet stuffed with bead-like grain. Amaranth is said to be everlasting.\"",
             "url": "https://deadbydaylight.gamepedia.com/Crispleaf_Amaranth_Sachet",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_crispleafAmaranthSachet.png"
         },
         {
             "displayName": "Shroud of Union",
-            "displayName_de": "Shroud of Union",
+            "displayName_de": "Tuch der Vereinigung",
             "description": "You start the trial with someone else.\nSecret.\n\"A knotted piece of fabric.\"",
             "url": "https://deadbydaylight.gamepedia.com/Shroud_of_Union",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_shroudOfUnion.png"
@@ -254,42 +254,42 @@
         },
         {
             "displayName": "Painted River Rock",
-            "displayName_de": "Painted River Rock",
+            "displayName_de": "Bemalter Flusskiesel",
             "description": "Slightly increases the chances of being sent to Red Forest when burnt.\nStacks\n\"A slick and soft rock, polished by a stream. Decorated with red, black and white paint to depict a serious looking bear.\"",
             "url": "https://deadbydaylight.gamepedia.com/Painted_River_Rock",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/DLC5/iconFavors_paintedRiverRock.png"
         },
         {
             "displayName": "Gruesome Gateau",
-            "displayName_de": "Gruesome Gateau (All Players)",
+            "displayName_de": "Ekeltorte",
             "description": "A terrific stomach-churning cake to mark our three years together. Grants 103% bonus Bloodpoints in all categories for all players this trial.\nStacks\n“Happy Anniversary! Here's to our three years together!\"\n– The Dead by Daylight Team",
             "url": "https://deadbydaylight.gamepedia.com/Gruesome_Gateau",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/Anniversary/iconFavors_gruesomeGateau.png"
         },
         {
             "displayName": "Strode Realty Key",
-            "displayName_de": "Strode Realty Key",
+            "displayName_de": "Strode-Immobilienschlüssel",
             "description": "Tremendously increases the chances of being sent to Haddonfield when burnt.\n\"A house key, mundane in appearance. A cardboard key-tag attached to it reads 'Strode Real Estate', followed by a handwritten address: '45 Lampkin Lane'.\"",
             "url": "https://deadbydaylight.gamepedia.com/Strode_Realty_Key",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/DLC2/iconFavors_strodeRealtyKey.png"
         },
         {
             "displayName": "Shredded Plate",
-            "displayName_de": "Shredded Plate",
+            "displayName_de": "Zerfetztes Nummernschild",
             "description": "Slightly increases the chances of being sent to the Autohaven Wreckers when burnt.\nStacks.\n\"A heavily rusted, bent and torn metal sheet.\"",
             "url": "https://deadbydaylight.gamepedia.com/Shredded_Plate",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_plateShredded.png"
         },
         {
             "displayName": "Shiny Coin",
-            "displayName_de": "Shiny Coin",
+            "displayName_de": "Blanke Münze",
             "description": "Calls on The Entity to create 2 more chests.\nStacks.\n\"A clean and polished piece of gold.\"",
             "url": "https://deadbydaylight.gamepedia.com/Shiny_Coin",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_shinyCoin.png"
         },
         {
             "displayName": "Heart Locket",
-            "displayName_de": "Heart Locket",
+            "displayName_de": "Herzmedaillon",
             "description": "Tremendously increases the chances of being sent to Coldwind Farm when burnt.\nStacks.\n\"A silver heart locket necklace. The simple interior is engraved with the following: 'E+M'.\"",
             "url": "https://deadbydaylight.gamepedia.com/Heart_Locket",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_heartLocket.png"
@@ -310,42 +310,42 @@
         },
         {
             "displayName": "Emergency Certificate",
-            "displayName_de": "Emergency Certificate",
+            "displayName_de": "Notfallformular",
             "description": "Slightly increases the chances of being sent to Léry's Memorial Institute when burnt.\nStacks.\n\"A yellow carbon-copy certificate which admits a patient into immediate detention for emergency treatment. Copied information are smudged and unreadable.\"",
             "url": "https://deadbydaylight.gamepedia.com/Emergency_Certificate",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/DLC4/iconFavors_emergencyCertificate.png"
         },
         {
             "displayName": "The Last Mask",
-            "displayName_de": "The Last Mask",
+            "displayName_de": "Die letzte Maske",
             "description": "Tremendously increases the chances of being sent to Red Forest when burnt.\n\"A beautifully crafted tiger mask that would fit snug on a child's face. A faded note in Cyrillic letters can be found scripted on the back.\"",
             "url": "https://deadbydaylight.gamepedia.com/The_Last_Mask",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/DLC5/iconFavors_theLastMask.png"
         },
         {
             "displayName": "Tanager Wreath",
-            "displayName_de": "Tanager Wreath (Personal)",
+            "displayName_de": "Tangarkranz",
             "description": "Grants 50% bonus Bloodpoints in the Brutality category.\nStacks.\n\"Crafted out of bloody sticks and guts, this wreath calls on The Entity's blessing for more blood.\"",
             "url": "https://deadbydaylight.gamepedia.com/Tanager_Wreath",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_tanagerWreath.png"
         },
         {
             "displayName": "Chalk Pouch",
-            "displayName_de": "Chalk Pouch",
+            "displayName_de": "Kreidebeutel",
             "description": "Slightly increases luck.\nPersonal.Stacks.\n\"A small cotton pouch filled with a white chalky powder of unknown origin. Some believe it brings good fortune.\"",
             "url": "https://deadbydaylight.gamepedia.com/Chalk_Pouch",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_chalkPouch.png"
         },
         {
             "displayName": "Shroud of Separation",
-            "displayName_de": "Shroud of Separation",
+            "displayName_de": "Tuch der Trennung",
             "description": "All Survivors start the trial separated.\nSecret.\n\"A thin black shroud which is falling apart.\"",
             "url": "https://deadbydaylight.gamepedia.com/Shroud_of_Separation",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_shroudOfSeparation.png"
         },
         {
             "displayName": "Yamaoka Family Crest",
-            "displayName_de": "Yamaoka Family Crest",
+            "displayName_de": "Wappen der Yamaoka-Familie",
             "description": "Tremendously increases the chances of being sent to Yamaoka Estate when burnt.\n\"You never leave a broken home. You only run away until the memories stop haunting you.\"",
             "url": "https://deadbydaylight.gamepedia.com/Yamaoka_Family_Crest",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/Haiti/iconFavors_yamaokasCrest.png"
@@ -359,14 +359,14 @@
         },
         {
             "displayName": "Grandma's Cookbook",
-            "displayName_de": "Grandma's Cookbook",
+            "displayName_de": "Großmutters Kochbuch",
             "description": "Tremendously increases the chances of being sent to Backwater Swamp when burnt.\n\"A leather-bound binder containing horrible human meat recipes such as the granny-slappin' good chili.\"",
             "url": "https://deadbydaylight.gamepedia.com/Grandma's_Cookbook",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/DLC3/iconFavors_granmasCookbook.png"
         },
         {
             "displayName": "Shroud of Binding",
-            "displayName_de": "Shroud of Binding",
+            "displayName_de": "Tuch der Bindung",
             "description": "All survivors start the trial together.\nSecret.\n\"A square and washed out piece of fabric with small knots on each end.\"",
             "url": "https://deadbydaylight.gamepedia.com/Shroud_of_Binding",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_shroudOfBinding.png"
@@ -387,42 +387,42 @@
         },
         {
             "displayName": "Clear Reagent",
-            "displayName_de": "Clear Reagent",
+            "displayName_de": "Klares Reagenzglas",
             "description": "Slightly lessens the Dark Mist.\nStacks.\n\"The Mist rolls in, traps all in Its deep madness. There is no running, no escape, no asylum, except for the clear waters of the pond lost in the forest.\" -Unknown, Notebook",
             "url": "https://deadbydaylight.gamepedia.com/Clear_Reagent",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_clearReagent.png"
         },
         {
             "displayName": "Ivory Memento Mori",
-            "displayName_de": "Ivory Memento Mori",
+            "displayName_de": "Memento Mori aus Elfenbein",
             "description": "Grants the ability to kill one Survivor who has been hooked by your hand during the next trial.Secret.\n\"Grant me the favor of killing one.\"",
             "url": "https://deadbydaylight.gamepedia.com/Ivory_Memento_Mori",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_momentoMoriIvory.png"
         },
         {
             "displayName": "Ardent Tanager Wreath",
-            "displayName_de": "Ardent Tanager Wreath (Personal)",
+            "displayName_de": "Inbrünstiger Tangarkranz",
             "description": "Grants 100% bonus Bloodpoints in the Brutality category.\nStacks.\n\"Crafted with a fiery, undying passion out of bloody sticks and guts, this wreath calls on The Entity's blessing for more blood.\"",
             "url": "https://deadbydaylight.gamepedia.com/Ardent_Tanager_Wreath",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_ardentTanagerWreath.png"
         },
         {
             "displayName": "Ardent Spotted Owl Wreath",
-            "displayName_de": "Ardent Spotted Owl Wreath (Personal)",
+            "displayName_de": "Inbrünstiger Fleckenkauzkranz",
             "description": "Grants 100% bonus Bloodpoints in the Hunting category.\nStacks.\n\"Crafted with a fiery, undying passion out of sharp metals, ropes and feathers, this wreath calls on The Entity's blessing for more blood.\"",
             "url": "https://deadbydaylight.gamepedia.com/Ardent_Spotted_Owl_Wreath",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_ardentSpottedOwlWreath.png"
         },
         {
             "displayName": "The Pied Piper",
-            "displayName_de": "The Pied Piper",
+            "displayName_de": "Der Rattenfänger",
             "description": "Tremendously increases the chances of being sent to Springwood when burnt.\n\"Betrayed by the town, he exacts his revenge by taking all their children.\"",
             "url": "https://deadbydaylight.gamepedia.com/The_Pied_Piper",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/England/iconFavors_thePiedPiper.png"
         },
         {
             "displayName": "Children's Book",
-            "displayName_de": "Children's Book",
+            "displayName_de": "Kinderbuch",
             "description": "Considerably increases the chances of being sent to Red Forest when burnt.\nStacks\n\"An ancient and decrepit story book, the pages of which have been lost to the elements.\"",
             "url": "https://deadbydaylight.gamepedia.com/Children's_Book",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/DLC5/iconFavors_childrensBook.png"
@@ -436,63 +436,63 @@
         },
         {
             "displayName": "Psychiatric Assessment Report",
-            "displayName_de": "Psychiatric Assessment Report",
+            "displayName_de": "Psychiatrischer Beurteilungsbericht",
             "description": "Considerably increases the chances of being sent to Léry's Memorial Institute when burnt.\nStacks.\n\"A Psychiatric report signed by Herman Carter. It describes the memory deterioration of a patient and contains suggestions for next steps in the procedure.\"",
             "url": "https://deadbydaylight.gamepedia.com/Psychiatric_Assessment_Report",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/DLC4/iconFavors_psychiatricAssessmentReport.png"
         },
         {
             "displayName": "Ardent Shrike Wreath",
-            "displayName_de": "Ardent Shrike Wreath (Personal)",
+            "displayName_de": "Inbrünstiger Würgerkranz",
             "description": "Grants 100% bonus Bloodpoints in the Sacrifice category.\nStacks.\n\"Crafted with a fiery, undying passion out of sticks, strings and bones, this wreath calls on The Entity's blessing for more blood.\"",
             "url": "https://deadbydaylight.gamepedia.com/Ardent_Shrike_Wreath",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_ardentShrikeWreath.png"
         },
         {
             "displayName": "Azarov's Key",
-            "displayName_de": "Azarov's Key",
+            "displayName_de": "Azarovs Schlüssel",
             "description": "Tremendously increases the chances of being sent to the Autohaven Wreckers when burnt.\nStacks.\n\"A broken key belonging to a vehicle of unknown brand. A keychain attached to it identifies the owner as a certain A. Azarov.\"",
             "url": "https://deadbydaylight.gamepedia.com/Azarov's_Key",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_azarovsKey.png"
         },
         {
             "displayName": "Devout Tanager Wreath",
-            "displayName_de": "Devout Tanager Wreath (Personal)",
+            "displayName_de": "Andächtiger Tangarkranz",
             "description": "Grants 75% bonus Bloodpoints in the Brutality category.\nStacks.\n\"Devoutly crafted out of bloody sticks and guts, this wreath calls on The Entity's blessing for more blood.\"",
             "url": "https://deadbydaylight.gamepedia.com/Devout_Tanager_Wreath",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_devoutTanagerWreath.png"
         },
         {
             "displayName": "Devout Shrike Wreath",
-            "displayName_de": "Devout Shrike Wreath (Personal)",
+            "displayName_de": "Andächtiger Würgerkranz",
             "description": "Grants 75% bonus Bloodpoints in the Sacrifice category.\nStacks.\n\"Devoutly crafted out of sticks, strings and bones, this wreath calls on The Entity's blessing for more blood.\"",
             "url": "https://deadbydaylight.gamepedia.com/Devout_Shrike_Wreath",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_devoutShrikeWreath.png"
         },
         {
             "displayName": "Spotted Owl Wreath",
-            "displayName_de": "Spotted Owl Wreath (Personal)",
+            "displayName_de": "Fleckenkauzkranz",
             "description": "Grants 50% bonus Bloodpoints in the Hunting category.\nStacks.\n\"Crafted out of sharp metals, ropes and feathers, this wreath calls on The Entity's blessing for more blood.\"",
             "url": "https://deadbydaylight.gamepedia.com/Spotted_Owl_Wreath",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_spottedOwlWreath.png"
         },
         {
             "displayName": "Ghastly Gateau",
-            "displayName_de": "Ghastly Gateau (All Players)",
+            "displayName_de": "Torte des Grauens",
             "description": "A spectacularly grim cake to mark our four years together. 1% tastier than a Gruesome Gateau. Grants 104% bonus Bloodpoints in all categories for all players this trial.\nStacks\n\"Happy Anniversary! Here's to many more!\"\n- The Dead by Daylight Team",
             "url": "https://deadbydaylight.gamepedia.com/Ghastly_Gateau",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/Anniversary/iconFavors_4thAnniversary.png"
         },
         {
             "displayName": "Charred Wedding Photograph",
-            "displayName_de": "Charred Wedding Photograph",
+            "displayName_de": "Verkohltes Hochzeitsfoto",
             "description": "Tremendously increases the chances of being sent to Crotus Prenn Asylum when burnt.\n\"A burned portrait of a couple on their wedding day, the faces are completely charred and unidentifiable.\"",
             "url": "https://deadbydaylight.gamepedia.com/Charred_Wedding_Photograph",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_charredWeddingPhotograph.png"
         },
         {
             "displayName": "Putrid Oak",
-            "displayName_de": "Putrid Oak",
+            "displayName_de": "Faulige Eiche",
             "description": "Calls upon The Entity to Considerably decrease the distance between sacrificial hooks appearing in the world.\nStacks.\n\"A ruined piece of oak oozing with a black putrescent liquid.\"",
             "url": "https://deadbydaylight.gamepedia.com/Putrid_Oak",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_putridOak.png"
@@ -513,35 +513,35 @@
         },
         {
             "displayName": "White Ward",
-            "displayName_de": "White Ward",
+            "displayName_de": "Weiße Abwehr",
             "description": "Burning this offering grants you protection against the loss of your item and add-ons.\n\"Keep me from evil, defend me, and pass away.\"",
             "url": "https://deadbydaylight.gamepedia.com/White_Ward",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_wardWhite.png"
         },
         {
             "displayName": "Signed Ledger Page",
-            "displayName_de": "Signed Ledger Page",
+            "displayName_de": "Unterzeichnete Kassenbuchseite",
             "description": "Considerably increases the chances of being sent to the MacMillan Estate when burnt.\nStacks.\n\"A faded-out ledger page referring to mining related equipment and other transactions. Signed by Archie MacMillan.\"",
             "url": "https://deadbydaylight.gamepedia.com/Signed_Ledger_Page",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_signedLedgerPage.png"
         },
         {
             "displayName": "Ivory Chalk Pouch",
-            "displayName_de": "Ivory Chalk Pouch",
+            "displayName_de": "Elfenbeinkreide-Beutel",
             "description": "Considerably increases luck.\nPersonal.Stacks.\n\"A small leather pouch displaying a straight white line hand-sewn on one of its sides. The bag is filled with an ivory chalky powder that shines under the moonlight. Some believe it brings good fortune.\"",
             "url": "https://deadbydaylight.gamepedia.com/Ivory_Chalk_Pouch",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_ivoryChalkPouch.png"
         },
         {
             "displayName": "Murky Reagent",
-            "displayName_de": "Murky Reagent",
+            "displayName_de": "Dunkles Reagenzglas",
             "description": "Greatly thickens the Dark Mist.\nStacks.\n\"The Mist seems to protect us from the beast, but it is a poison, a cancer, filling us with darkness and insanity.\" -Unknown, Notebook",
             "url": "https://deadbydaylight.gamepedia.com/Murky_Reagent",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_murkyReagent.png"
         },
         {
             "displayName": "Bog Laurel Sachet",
-            "displayName_de": "Bog Laurel Sachet (Personal)",
+            "displayName_de": "Lokus-Lorbeer-Duftsäckchen",
             "description": "Grants 50% bonus Bloodpoints in the Objective category.\nPersonal.Stacks.\n\"A palm-sized hand-sewn sachet filled with dry leaves. Releases a faint tea-like aroma.\"",
             "url": "https://deadbydaylight.gamepedia.com/Bog_Laurel_Sachet",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_bogLaurelSachet.png"
@@ -562,35 +562,35 @@
         },
         {
             "displayName": "Vigo's Jar of Salty Lips",
-            "displayName_de": "Vigo's Jar of Salty Lips",
+            "displayName_de": "Vigos Gefäß der salzigen Lippen",
             "description": "Considerably increases luck of all Survivors.\nStacks.\n\"A tightly sealed glass jar containing torn human lips floating in a murky brine. Some believe it brings good fortune.\"",
             "url": "https://deadbydaylight.gamepedia.com/Vigo's_Jar_of_Salty_Lips",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_jarOfSaltyLips.png"
         },
         {
             "displayName": "Fragrant Primrose Blossom",
-            "displayName_de": "Fragrant Primrose Blossom (Personal)",
+            "displayName_de": "Wohlriechende Primelblüten",
             "description": "Grants 100% bonus Bloodpoints in the Altruism category.\nPersonal.Stacks.\n\"Golden flowers harvested at their peak. Releases a strong earthy and comforting aroma.\"",
             "url": "https://deadbydaylight.gamepedia.com/Fragrant_Primrose_Blossom",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_fragrantPrimroseBlossom.png"
         },
         {
             "displayName": "Tarnished Coin",
-            "displayName_de": "Tarnished Coin",
+            "displayName_de": "Getrübte Münze",
             "description": "Calls on The Entity to create 1 more chest.\nStacks.\n\"A round piece of metal which has lost all sheen.\"",
             "url": "https://deadbydaylight.gamepedia.com/Tarnished_Coin",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_tarnishedCoin.png"
         },
         {
             "displayName": "Scratched Coin",
-            "displayName_de": "Scratched Coin",
+            "displayName_de": "Zerkratze Münze",
             "description": "Calls on The Entity to prevent the appearance of 1 chest.\nStacks.\n\"A defaced coin of unknown origin.\"",
             "url": "https://deadbydaylight.gamepedia.com/Scratched_Coin",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_scratchedCoin.png"
         },
         {
             "displayName": "Fresh Sweet William",
-            "displayName_de": "Fresh Sweet William (Personal)",
+            "displayName_de": "Frische Bartnelke",
             "description": "Grants 75% bonus Bloodpoints in the Boldness category.\nPersonal.Stacks.\n\"A bunch of flowers with pink petals and a blood red core. Releases a spicy, clove-like scent.\"",
             "url": "https://deadbydaylight.gamepedia.com/Fresh_Sweet_William",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_freshSweetWilliam.png"
@@ -604,119 +604,119 @@
         },
         {
             "displayName": "Fresh Primrose Blossom",
-            "displayName_de": "Fresh Primrose Blossom (Personal)",
+            "displayName_de": "Frische Primelblüten",
             "description": "Grants 75% bonus Bloodpoints in the Altruism category.\nPersonal.Stacks.\n\"Golden flowers harvested at their peak. The primrose opens at the very last moment before the sun gives place to the night.\"",
             "url": "https://deadbydaylight.gamepedia.com/Fresh_Primrose_Blossom",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_freshPrimroseBlossom.png"
         },
         {
             "displayName": "MacMillan's Phalanx Bone",
-            "displayName_de": "MacMillan's Phalanx Bone",
+            "displayName_de": "MacMillans Fingerknochen",
             "description": "Tremendously increases the chances of being sent to the MacMillan Estate when burnt.\nStacks.\n\"MacMillan's skeletal remains were found in the basement of the mine's storehouse. His leg bones shattered into pieces and a mining hammer lying in his lap.\"",
             "url": "https://deadbydaylight.gamepedia.com/MacMillan's_Phalanx_Bone",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_macmilliansPhalanxBone.png"
         },
         {
             "displayName": "Raven Wreath",
-            "displayName_de": "Raven Wreath (Personal)",
+            "displayName_de": "Rabenkranz",
             "description": "Grants 50% bonus Bloodpoints in the Deviousness category.\nStacks.\n\"Crafted out of blackened branches and coals, this wreath calls on The Entity's blessing for more blood.\"",
             "url": "https://deadbydaylight.gamepedia.com/Raven_Wreath",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_ravenWreath.png"
         },
         {
             "displayName": "Virginia Plate",
-            "displayName_de": "Virginia Plate",
+            "displayName_de": "Nummernschild von Virginia",
             "description": "Considerably increases the chances of being sent to the Autohaven Wreckers when burnt.\nStacks.\n\"A rusted and bent license plate from the state of Virginia.\"",
             "url": "https://deadbydaylight.gamepedia.com/Virginia_Plate",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_plateVirginia.png"
         },
         {
             "displayName": "Ebony Memento Mori",
-            "displayName_de": "Ebony Memento Mori",
+            "displayName_de": "Memento Mori aus Ebenholz",
             "description": "Grants the ability to kill all survivors who have been hooked by your hand during the next trial.Secret.\n\"I could swear It spoke to the beast. It came to a halt, as if calmly listening to the leaves rustling, and then… grinned.\"",
             "url": "https://deadbydaylight.gamepedia.com/Ebony_Memento_Mori",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_momentoMoriEbony.png"
         },
         {
             "displayName": "Fragrant Crispleaf Amaranth",
-            "displayName_de": "Fragrant Crispleaf Amaranth (Personal)",
+            "displayName_de": "Wohlriechender Fuchsschwanz",
             "description": "Grants 100% bonus Bloodpoints in the Survival category.\nPersonal.Stacks.\n\"The pale green leaves are highlighted with peculiar crimson veins. Releases a strong radish aroma.\"",
             "url": "https://deadbydaylight.gamepedia.com/Fragrant_Crispleaf_Amaranth",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_fragrantCrispleafAmaranth.png"
         },
         {
             "displayName": "Devout Spotted Owl Wreath",
-            "displayName_de": "Devout Spotted Owl Wreath (Personal)",
+            "displayName_de": "Andächtiger Fleckenkauzkranz",
             "description": "Grants 75% bonus Bloodpoints in the Hunting category.\nStacks.\n\"Devoutly crafted out of sharp metals, ropes and feathers, this wreath calls on The Entity's blessing for more blood.\"",
             "url": "https://deadbydaylight.gamepedia.com/Devout_Spotted_Owl_Wreath",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_devoutSpottedOwlWreath.png"
         },
         {
             "displayName": "Decrepit Clapboard",
-            "displayName_de": "Decrepit Clapboard",
+            "displayName_de": "Marode Dachschindel",
             "description": "Considerably increases the chances of being sent to Haddonfield when burnt.\nStacks.\n\"A moldy and rotten beaded oak clapboard like the ones found on most houses of Haddonfield.\"",
             "url": "https://deadbydaylight.gamepedia.com/Decrepit_Clapboard",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/DLC2/iconFavors_decrepitClapboard.png"
         },
         {
             "displayName": "Shattered Glasses",
-            "displayName_de": "Shattered Glasses",
+            "displayName_de": "Kaputte Brille",
             "description": "Tremendously increases the chances of being sent to Léry's Memorial Institute when burnt.\n\"Bent reading glasses. Speckles of dried blood can be seen on the shattered lens.\"",
             "url": "https://deadbydaylight.gamepedia.com/Shattered_Glasses",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/DLC4/iconFavors_shatteredGlasses.png"
         },
         {
             "displayName": "Fresh Bog Laurel",
-            "displayName_de": "Fresh Bog Laurel (Personal)",
+            "displayName_de": "Frische Lorbeerrosen",
             "description": "Grants 75% bonus Bloodpoints in the Objective category.\nPersonal.Stacks.\n\"A beautiful purple flower that grows in the midst of the tainted swamp. Releases a mild tea-like aroma.\"",
             "url": "https://deadbydaylight.gamepedia.com/Fresh_Bog_Laurel",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_freshBogLaurel.png"
         },
         {
             "displayName": "Cream Chalk Pouch",
-            "displayName_de": "Cream Chalk Pouch",
+            "displayName_de": "Cremekreide-Beutel",
             "description": "Moderately increases luck.\nPersonal.Stacks.\n\"A small cotton pouch half-filled with a cream colored chalky powder of unknown origin. Releases a faint herbal aroma. Some believe it brings good fortune.\"",
             "url": "https://deadbydaylight.gamepedia.com/Cream_Chalk_Pouch",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_creamChalkPouch.png"
         },
         {
             "displayName": "Black Salt Statuette",
-            "displayName_de": "Black Salt Statuette",
+            "displayName_de": "Schwarze Salzstatuette",
             "description": "Moderately increases luck of all Survivors.\nStacks.\n\"A friable miniature statuette made of black salt representing a woman in a kneeling position offering a gift. Some believe it brings good fortune.\"",
             "url": "https://deadbydaylight.gamepedia.com/Black_Salt_Statuette",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_blackSaltStatuette.png"
         },
         {
             "displayName": "Moldy Oak",
-            "displayName_de": "Moldy Oak",
+            "displayName_de": "Modrige Eiche",
             "description": "Calls upon The Entity to Slightly decrease the distance between sacrificial hooks appearing in the world.\nStacks.\n\"A damp and decaying piece of oak replete with mold.\"",
             "url": "https://deadbydaylight.gamepedia.com/Moldy_Oak",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_moldyOak.png"
         },
         {
             "displayName": "Fuming Welcome Sign",
-            "displayName_de": "Fuming Welcome Sign",
+            "displayName_de": "Dampfendes Willkommensschild",
             "description": "Considerably increases the chances of being sent to Backwater Swamp when burnt.\nStacks.\n\"A welcome sign made from a coarse piece of water polished cypress board. The sign is charred and still fuming.\"",
             "url": "https://deadbydaylight.gamepedia.com/Fuming_Welcome_Sign",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/DLC3/iconFavors_fumingWelcomeSign.png"
         },
         {
             "displayName": "Black Ward",
-            "displayName_de": "Black Ward",
+            "displayName_de": "Schwarze Abwehr",
             "description": "Burning this offering grants you protection against the loss of your add-ons at the end of the trial.\n\"Hear my voice, spare my ways, protect me from the void.\"",
             "url": "https://deadbydaylight.gamepedia.com/Black_Ward",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_wardBlack.png"
         },
         {
             "displayName": "Hazy Reagent",
-            "displayName_de": "Hazy Reagent",
+            "displayName_de": "Trübes Reagenzglas",
             "description": "Moderately thickens the Dark Mist.\nStacks.\n\"The Mist is alluring, hypnotizing. I love It and fear It at the same time.\" -Donna's Sketchbook",
             "url": "https://deadbydaylight.gamepedia.com/Hazy_Reagent",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_hazyReagent.png"
         },
         {
             "displayName": "Devout Raven Wreath",
-            "displayName_de": "Devout Raven Wreath (Personal)",
+            "displayName_de": "Andächtiger Rabenkranz",
             "description": "Grants 75% bonus Bloodpoints in the Deviousness category.\nStacks.\n\"Devoutly crafted out of blackened branches and coals, this wreath calls on The Entity's blessing for more blood.\"",
             "url": "https://deadbydaylight.gamepedia.com/Devout_Raven_Wreath",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Favors/iconFavors_devoutRavenWreath.png"
@@ -760,7 +760,7 @@
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Perks/DLC3/iconPerks_ruin.png"
         },
         {
-            "displayName": "Dead Man’s Switch\t",
+            "displayName": "Dead Man's Switch\t",
             "displayName_de": "(?)",
             "description": "You become obsessed with one Survivor.\n\nAfter hooking the Obsession, Dead Man's Switch activates for the next 45 seconds. \n\nWhile activated, any Survivor that stops repairing a generator before it is fully repaired causes The Entity to block the generator until Dead Man's Switch's effect ends. \n\nAffected generators are highlighted by a white aura.\n\nThe Killer can only be obsessed with one survivor at a time.\n\n\"I've seen the look on a man's face when he realizes he's going to die.\" -Caleb Quinn",
             "isTeachable": true,
@@ -768,7 +768,7 @@
                 "character": "Deathslinger",
                 "lvl": 35
             },
-            "url": "https://deadbydaylight.gamepedia.com/Dead_Man’s_Switch\t",
+            "url": "https://deadbydaylight.gamepedia.com/Dead_Man's_Switch\t",
             "image": "https://dbd-stats.info/data/Public/UI/Icons/Perks/Ukraine/iconPerks_deadManSwitch.png"
         },
         {
@@ -2563,7 +2563,7 @@
     "survivors": [
         {
             "displayName": "Laurie Strode",
-            "fullName": null,
+            "fullName": "Cynthia Myers",
             "gender": "Female",
             "nationality": "American",
             "role": "Determined Survivor",
@@ -2852,7 +2852,7 @@
         },
         {
             "displayName": "Feng Min",
-            "fullName": null,
+            "fullName": "凤敏 (Chinese)",
             "gender": "Female",
             "nationality": "Chinese",
             "role": "Focused Competitor",
