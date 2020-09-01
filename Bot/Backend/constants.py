@@ -47,6 +47,9 @@ FGO_REST_API = 'https://api.atlasacademy.io/nice/NA/'
 FGO_WIKI_URL = 'https://grandorder.wiki/'
 FGO_ICON_URL = 'https://cdn.discordapp.com/attachments/626462024913911818/750153394949193848/NeroIcon.png'
 
+# > Cog : Magic 8Ball
+M8B_ICON_URL = 'https://discordapp.com/assets/0cfd4882c0646d504900c90166d80cf8.svg'
+
 # > Cog : Never Have I Ever
 NHIE_URL = 'http://www.neverhaveiever.org'
 NHIE_ICON_URL = 'https://discordapp.com/assets/4e4a4ac66710b0aecf931cd72cd65d9e.svg'
