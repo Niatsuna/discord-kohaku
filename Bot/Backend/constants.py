@@ -39,6 +39,7 @@ AC_WIKI_URL = 'https://nookipedia.com/wiki/'
 # > Cog : Dead by Daylight
 DBD_REST_API = 'https://dbd-stats.info/api/'
 DBD_WIKI_URL = 'https://deadbydaylight.gamepedia.com/'
+DBD_ICON_URL = 'https://cdn.discordapp.com/attachments/737974066362712094/739284880768237658/file.png'
 
 # > Cog : Fate/Grand Order
 FGO_REST_API = 'https://api.atlasacademy.io/nice/NA/'

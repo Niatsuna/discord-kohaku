@@ -15,7 +15,7 @@ class DeadByDaylight(commands.Cog):
         self.resources = None
         self.instant = {
             ('shrine', 'schrein', 'sos') : self.dbd_shrine,
-            ('survivors', 'überlebende', 'survivor', 'überlebender') : self.dbd_survivors,
+            ('survivors', 'survivor') : self.dbd_survivors,
             ('killers', 'killer') : self.dbd_killers }
         self.functions = [ self.dbd_survivor, self.dbd_killer, self.dbd_perk, self.dbd_offering ]
 
@@ -24,8 +24,15 @@ class DeadByDaylight(commands.Cog):
 
     def longDescription(self):
         title = 'Dead by Daylight'
-        description = 'Wa'
-        return [utils.embed_create(title=title, description=description), None]
+        description = 'This module is connected to the game \'Dead by Daylight\'\n\n**Invoke:** _`{}dbd <parameter>`_\n\n**_Possible parameters:_**\n'.format(constants.INVOKE)
+        fields = []
+        for (k, v) in self.instant.items():
+            param = '/'.join(k)
+            fields.append(['_`{}`_'.format(param), v.__doc__, False])
+        for func in self.functions:
+            doc = func.__doc__.split('|')
+            fields.append(['_`{}`_'.format(doc[1].strip()), doc[0].strip(), False])
+        return [utils.embed_create(title=title, description=description, fields=fields, thumbnail=constants.DBD_ICON_URL), None]
 
     def isSecret(self):
         return False
@@ -51,6 +58,7 @@ class DeadByDaylight(commands.Cog):
         return True
 
     async def dbd_shrine(self, ctx):
+        '''Shows the current shrine of secrets.'''
         if not self.dbd_resources():
             return False
         try:
@@ -88,6 +96,7 @@ class DeadByDaylight(commands.Cog):
         return True
 
     async def dbd_survivors(self, ctx):
+        '''List all survivors.'''
         if not self.dbd_resources():
             return False
         title = 'Survivors'
@@ -103,6 +112,7 @@ class DeadByDaylight(commands.Cog):
         return True
 
     async def dbd_killers(self, ctx):
+        '''List all killers.'''
         if not self.dbd_resources():
             return False
         title = 'Killers'
@@ -118,6 +128,7 @@ class DeadByDaylight(commands.Cog):
         return True
 
     async def dbd_survivor(self, ctx, name):
+        '''Shows a short information sheet about a named survivor.| <survivor-name>'''
         if not self.dbd_resources():
             return False
         for v in self.resources['survivors']:
@@ -129,12 +140,12 @@ class DeadByDaylight(commands.Cog):
                 fields = [['DLC', v['dlc'], True],['Difficulty', v['difficulty'], True],[None, True]]
                 for i in range(0,len(v['perks'])):
                     fields.append(['Lvl {}'.format(30 + 5*i), v['perks'][i], True])
-                img = utils.image_open_url(v['image'])
-                await utils.embed_send(ctx, utils.embed_create(title=title, description=description, fields=fields, thumbnail='attachment://image.png'), file=utils.image_to_file(img))
+                await utils.embed_send(ctx, utils.embed_create(title=title, description=description, fields=fields, thumbnail=v['image']))
                 return True
         return False
 
     async def dbd_killer(self, ctx, name):
+        '''Shows a short information sheet about a named killer.\nEnglish and german allowed!| <killer-name>/<killer-title>'''
         if not self.dbd_resources():
             return False
         for v in self.resources['killers']:
@@ -148,12 +159,12 @@ class DeadByDaylight(commands.Cog):
                             ['DLC', v['dlc'], True],['Difficulty', v['difficulty'], True],[None, True]]
                 for i in range(0,len(v['perks'])):
                     fields.append(['Lvl {}'.format(30 + 5*i), v['perks'][i], True])
-                img = utils.image_open_url(v['image'])
-                await utils.embed_send(ctx, utils.embed_create(title=title, description=description, fields=fields, thumbnail='attachment://image.png'), file=utils.image_to_file(img))
+                await utils.embed_send(ctx, utils.embed_create(title=title, description=description, fields=fields, thumbnail=v['image']))
                 return True
         return False
 
     async def dbd_perk(self, ctx, name):
+        '''Shows a short information sheet about a named perk.\nEnglish and german allowed!| <perk-name>'''
         if not self.dbd_resources() or self.isCharacter(name):
             return False
         for v in self.resources['perks']:
@@ -164,20 +175,19 @@ class DeadByDaylight(commands.Cog):
                     fields = [['Type', 'Teachable :star: | {} (Lvl {})'.format(v['teachableInfo']['character'], v['teachableInfo']['lvl']), False]]
                 else:
                     fields = [['Type', 'Unlockable :lock:', False]]
-                img = utils.image_open_url(v['image'])
-                await utils.embed_send(ctx, utils.embed_create(title=title, description=description, fields=fields, thumbnail='attachment://image.png'), file=utils.image_to_file(img))
+                await utils.embed_send(ctx, utils.embed_create(title=title, description=description, fields=fields, thumbnail=v['image']))
                 return True
         return False
 
     async def dbd_offering(self, ctx, name):
+        '''Shows a short information sheet about a named offering.\nEnglish and german allowed!| <offering-name>'''
         if not self.dbd_resources() or self.isCharacter(name):
             return False
         for v in self.resources['offerings']:
             if name in v['displayName'].lower() or name in v['displayName_de'].lower():
                 title = '{} | {}'.format(v['displayName'], v['displayName_de'])
                 description = '[Wikipage]({})\n\n{}'.format(v['url'], v['description'])
-                img = utils.image_open_url(v['image'])
-                await utils.embed_send(ctx, utils.embed_create(title=title, description=description, thumbnail='attachment://image.png'), file=utils.image_to_file(img))
+                await utils.embed_send(ctx, utils.embed_create(title=title, description=description, thumbnail=v['image']))
                 return True
         return False
 
