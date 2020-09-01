@@ -48,11 +48,11 @@ FGO_WIKI_URL = 'https://grandorder.wiki/'
 FGO_ICON_URL = 'https://cdn.discordapp.com/attachments/626462024913911818/750153394949193848/NeroIcon.png'
 
 # > Cog : Magic 8Ball
-M8B_ICON_URL = 'https://discordapp.com/assets/0cfd4882c0646d504900c90166d80cf8.svg'
+M8B_ICON_URL = 'https://images.emojiterra.com/twitter/v13.0/128px/1f3b1.png'
 
 # > Cog : Never Have I Ever
 NHIE_URL = 'http://www.neverhaveiever.org'
-NHIE_ICON_URL = 'https://discordapp.com/assets/4e4a4ac66710b0aecf931cd72cd65d9e.svg'
+NHIE_ICON_URL = 'https://images.emojiterra.com/twitter/v13.0/128px/1f379.png'
 
 # > Cog : Pokémon
 PKM_REST_API = 'https://pokeapi.co/api/v2/'
@@ -62,4 +62,4 @@ PKM_ICON_URL = 'https://cdn.discordapp.com/emojis/741978619361886261.png?v=1'
 
 # > Cog : Would you rather
 WYR_URL = 'http://either.io/{}'
-WYR_ICON_URL = 'https://discordapp.com/assets/2cc6266229c7e2ccfde10e81782e8b5c.svg'
+WYR_ICON_URL = 'https://images.emojiterra.com/twitter/v13.0/128px/2049.png'
