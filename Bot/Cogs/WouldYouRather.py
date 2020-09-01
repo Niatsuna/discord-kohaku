@@ -22,7 +22,7 @@ class WouldYouRather(commands.Cog):
     def longDescription(self):
         title='Would you rather'
         description = 'Asks you a specific \'A/B\'-question.\n\n**Invoke:** _`{}wyr`_'.format(constants.INVOKE)
-        return [utils.embed_create(title=title, description=description), None]
+        return [utils.embed_create(title=title, description=description, thumbnail=constants.WYR_ICON_URL), None]
 
     def isSecret(self):
         return False

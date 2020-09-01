@@ -21,7 +21,7 @@ class NeverHaveIEver(commands.Cog):
     def longDescription(self):
         title = 'Never have I ever'
         description = 'Selects a specific scenario.\n If you never did that, you pass ❌. But if you did do it at some point in your life: Drink! 🍹\n\n **Invoke:** _`{}nhie`_'.format(constants.INVOKE)
-        return [utils.embed_create(title=title, description=description), None]
+        return [utils.embed_create(title=title, description=description, thumbnail=constants.NHIE_ICON_URL), None]
 
     def isSecret(self):
         return False

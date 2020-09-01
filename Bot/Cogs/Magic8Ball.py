@@ -23,7 +23,7 @@ class Magic8Ball(commands.Cog):
     def longDescription(self):
         title='Magic 8Ball'
         desc = 'Answers your \'yes/no\'-questions.\n\n**Invoke:** `{}8b <question>`'.format(constants.INVOKE)
-        return [utils.embed_create(title=title, description=desc), None]
+        return [utils.embed_create(title=title, description=desc, thumbnail=constants.M8B_ICON_URL), None]
 
     def isSecret(self):
         return False

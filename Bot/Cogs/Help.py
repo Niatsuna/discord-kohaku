@@ -36,7 +36,7 @@ class Help(commands.Cog):
             except:
                 short = self.shortDescription_default()
             fields.append(['`{}{}`'.format(constants.INVOKE, cmd), '_{}_'.format(short), False])
-        return [utils.embed_create(title=title, description=desc, fields=fields), None]
+        return [utils.embed_create(title=title, description=desc, fields=fields, thumbnail=self.client.user.avatar_url), None]
 
     def isSecret(self):
         return False
