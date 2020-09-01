@@ -27,6 +27,10 @@ async def map_function_async(data):
 # > Embed
 def embed_create(title=Embed.Empty, description=Embed.Empty, fields=[], image=None, thumbnail=None, footer={'text': Embed.Empty, 'icon_url': Embed.Empty}):
     '''Creates an Embed or a list of Embeds if the given parameters exceed the limits.'''
+    if 'icon_url' not in footer.keys():
+        footer['icon_url'] = Embed.Empty
+    if 'text' not in footer.keys():
+        footer['text'] = Embed.Empty
     if fields == []:
         count = 1
     else:
