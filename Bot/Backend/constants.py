@@ -36,6 +36,8 @@ GITHUB_URL_BOARD = 'https://github.com/Niatsuna/discord-kohaku/projects/1'
 AC_REST_API = 'https://acnhapi.com/v1/'
 AC_WIKI_URL = 'https://nookipedia.com/wiki/'
 AC_ICON_URL = 'https://cdn.discordapp.com/attachments/270376999925579778/744274811559215165/Du_bist_so_ein_Jfif_nea_das_musste_mal_gesagt_werden.png' # Love ya, hon
+AC_ICON_NORTH_URL = 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/twitter/259/snowflake_2744.png'
+AC_ICON_SOUTH_URL = 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/twitter/259/bright-button_1f506.png'
 
 # > Cog : Dead by Daylight
 DBD_REST_API = 'https://dbd-stats.info/api/'
