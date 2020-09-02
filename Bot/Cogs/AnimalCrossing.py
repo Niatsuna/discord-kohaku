@@ -15,7 +15,7 @@ class AnimalCrossing(commands.Cog):
         self.resources = None
         self.functions = [ self.ac_art, self.ac_bug, self.ac_fish, self.ac_fossil, self.ac_items, self.ac_month, self.ac_sea, self.ac_song, self.ac_villager ]
         self.critter_month_footer = {'text' : '❆ North | ☀ South'}
-        self.months = self.load_month_map()
+        self.months = [None, ['Januar', 'Jan'], ['Februar', 'Feb'], ['März', 'Mrz'], ['April', 'Apr'], ['Mai', 'Mai'], ['Juni', 'Jun'], ['Juli', 'Jul'], ['August', 'Aug'], ['September', 'Sep'], ['Oktober', 'Okt'], ['November', 'Nov'], ['Dezember', 'Dez']]
         self.months_react = { 'ARRIVING' : '\N{AIRPLANE ARRIVING}', 'ALL' : '\N{DESERT ISLAND}', 'LEAVING' : '\N{AIRPLANE DEPARTURE}'}
 
     def shortDescription(self):
@@ -240,14 +240,6 @@ class AnimalCrossing(commands.Cog):
             else:
                 embeds += [em]
         return embeds
-
-    def load_month_map(self):
-        months = [None]
-        with calendar.different_locale('de_DE'):
-            for i in range(1, 13):
-                german = [calendar.month_name[i], calendar.month_abbr[i]]
-                months.append(german)
-        return months
 
 # -----------------------------------------------------------------------------------------------
 def setup(client):
