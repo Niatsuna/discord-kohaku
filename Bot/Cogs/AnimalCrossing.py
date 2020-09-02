@@ -6,8 +6,6 @@ import Bot.Backend.utils as utils
 import Bot.Backend.constants as constants
 from concurrent.futures import ThreadPoolExecutor
 from discord.ext import commands
-import requests
-import locale
 
 # -----------------------------------------------------------------------------------------------
 class AnimalCrossing(commands.Cog):
@@ -51,6 +49,7 @@ class AnimalCrossing(commands.Cog):
         return True
 
     async def ac_art(self, ctx, name):
+        '''Shows for a named piece of art if a fake exists.\nEnglish and german allowed!| <art-name>'''
         if not self.ac_resources():
             return False
         for v in self.resources['art']:
@@ -61,6 +60,7 @@ class AnimalCrossing(commands.Cog):
         return False
 
     async def ac_bug(self, ctx, name):
+        '''Shows a short information sheet about a named bug.\nEnglish and german allowed!| <bug-name>'''
         if not self.ac_resources():
             return False
         for v in self.resources['bugs']:
@@ -78,6 +78,7 @@ class AnimalCrossing(commands.Cog):
         return False
 
     async def ac_fish(self, ctx, name):
+        '''Shows a short information sheet about a named fish.\nEnglish and german allowed!| <fish-name>'''
         if not self.ac_resources():
             return False
         for v in self.resources['fish']:
@@ -95,6 +96,7 @@ class AnimalCrossing(commands.Cog):
         return False
 
     async def ac_fossil(self, ctx, name):
+        '''Shows a short information sheet about a named fossil.\nEnglish and german allowed!| <fossil-name>'''
         if not self.ac_resources():
             return False
         for v in self.resources['fossils']:
@@ -107,6 +109,7 @@ class AnimalCrossing(commands.Cog):
         return False
 
     async def ac_items(self, ctx, name):
+        '''Shows a short information sheet about a named items.\nEnglish and german allowed!| <item-name>'''
         if not self.ac_resources():
             return False
         for v in self.resources['items']:
@@ -119,6 +122,7 @@ class AnimalCrossing(commands.Cog):
         return False
 
     async def ac_month(self, ctx, name):
+        '''Lists all catchables for the month (special options).\nEnglish, german and numeric allowed!\nFor southern hemisphere add `south` at the end.\nFor 'All Year's catchables: all year or 0| <month-name>/<month-number>'''
         if not self.ac_resources():
             return False
         if name.startswith('all year'):
@@ -170,6 +174,7 @@ class AnimalCrossing(commands.Cog):
         return True
 
     async def ac_sea(self, ctx, name):
+        '''Shows a short information sheet about a named sea creature.\nEnglish and german allowed!| <seaCreature-name>'''
         if not self.ac_resources():
             return False
         for v in self.resources['sea creatures']:
@@ -187,6 +192,7 @@ class AnimalCrossing(commands.Cog):
         return False
 
     async def ac_song(self, ctx, name):
+        '''Shows a short information sheet about a named song.\nEnglish and german allowed!| <song-name>'''
         if not self.ac_resources():
             return False
         for v in self.resources['songs']:
@@ -198,6 +204,7 @@ class AnimalCrossing(commands.Cog):
         return False
 
     async def ac_villager(self, ctx, name):
+        '''Shows a short information sheet about a named villager.\nEnglish and german allowed!| <villager-name>'''
         if not self.ac_resources():
             return False
         for v in self.resources['villagers']:
