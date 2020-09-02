@@ -31,7 +31,7 @@ def fishs(result):
         fish_result.append(fish)
     result['fish'] = fish_result
 
-def sea(result, api):
+def sea(result):
     sea_result = []
     for v in list(API['sea'].values()):
         sea = {}
@@ -106,7 +106,7 @@ def villagers(result):
         vill['birthday'] = v['birthday-string']
         vill['species'] = v['species']
         vill['gender'] = v['gender']
-        vill['catch-phrase'] = v['catch-phrase'] + '({})'.format(v['catch-translations']['catch-EUde'])
+        vill['catch-phrase'] = v['catch-phrase'] + ' ({})'.format(v['catch-translations']['catch-EUde'])
         vill['saying'] = v['saying']
         vill['image'] = v['image_uri']
         vill['icon'] = v['icon_uri']
