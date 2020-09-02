@@ -20,6 +20,9 @@ class EventHandler(commands.Cog):
     async def on_message(self, message):
         if message.author.bot:
             return
+        for (key, gif) in constants.GIFS.items():
+            if key in message.content.lower().split(' '):
+                await message.channel.send(embed=utils.embed_create(image=gif))
 
     @commands.Cog.listener()
     async def on_ready(self):
