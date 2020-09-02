@@ -59,7 +59,7 @@ def embed_create(title=Embed.Empty, description=Embed.Empty, fields=[], image=No
 async def embed_send(ctx, embed, file=None):
     '''Sends the Embed or a list of Embeds to the given channel in the context.'''
     if isinstance(embed, Embed):
-        await ctx.message.channel.send(embed=embed, file=file)
+        return await ctx.message.channel.send(embed=embed, file=file)
     else:
         if isinstance(file, list) and len(file) < len(embed):
             file = file + [None] * (len(embed) - len(file))
@@ -67,6 +67,7 @@ async def embed_send(ctx, embed, file=None):
             file = [file] * len(embed)
         for i in range(0, len(embed)):
             await ctx.message.channel.send(embed=embed[i], file=file[i])
+        return -1
 
 # > Image
 filters = {1 : Image.NEAREST, 2 : Image.BOX, 3 : Image.BILINEAR, 4 : Image.HAMMING, 5 : Image.BICUBIC, 6 : Image.LANCZOS}
