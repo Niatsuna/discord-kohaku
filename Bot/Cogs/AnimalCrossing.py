@@ -243,10 +243,10 @@ class AnimalCrossing(commands.Cog):
 
     def load_month_map(self):
         months = [None]
-        #with calendar.different_locale('de_DE'):
-        for i in range(1, 13):
-            german = [calendar.month_name[i], calendar.month_abbr[i]]
-            months.append(german)
+        with calendar.different_locale('de_DE'):
+            for i in range(1, 13):
+                german = [calendar.month_name[i], calendar.month_abbr[i]]
+                months.append(german)
         return months
 
 # -----------------------------------------------------------------------------------------------
