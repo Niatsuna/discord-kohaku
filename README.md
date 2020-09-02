@@ -64,8 +64,8 @@ Entries marked with an  :no_entry_sign: are currently not available but planned.
 * Magic 8Ball - `8b`
 
 ### Game Information
-* Animal Crossing : New Horizons - `ac` :no_entry_sign:
-* Dead by Daylight - `dbd`  :no_entry_sign:
+* Animal Crossing : New Horizons - `ac`
+* Dead by Daylight - `dbd`
 * Fate/Grand Order - `fgo` :no_entry_sign:
 * Pokémon - `pkm`  :no_entry_sign:
 
