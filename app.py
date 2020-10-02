@@ -8,12 +8,23 @@ from discord.ext import commands
 import Bot.Backend.constants as constants
 import sys
 import Bot.Backend.utils as utils
+import json
+from Bot.Backend.Firebase import Firebase
 
 # -----------------------------------------------------------------------------------------------
 # >> Variables
 client = commands.Bot(command_prefix=constants.INVOKE)
 client.remove_command('help') # Removes default help command
-discord_token = sys.argv[1]
+try:
+    _credentials = json.loads(sys.argv[2])
+except:
+    _credentials = utils.json_load('fire_cred.json')
+constants.FIRE_CON = Firebase(_credentials)
+
+@client.event
+async def on_message(message):
+    # Does nothing (Override deafult on_message)
+    return
 
 # -----------------------------------------------------------------------------------------------
 # >> Extensions
@@ -27,4 +38,4 @@ for cog in constants.COGS:
         utils.warn('[Kohaku] Failed to load extension {}\n{}'.format(cog, exc))
 
 # -----------------------------------------------------------------------------------------------
-client.run(discord_token)
+client.run(sys.argv[1])
