@@ -5,6 +5,8 @@ import discord
 from discord.ext import commands
 import Bot.Backend.constants as constants
 import Bot.Backend.utils as utils
+import random
+from datetime import datetime
 
 # > ---------------------------------------------------------------------------
 class EventHandler(commands.Cog):
@@ -20,11 +22,23 @@ class EventHandler(commands.Cog):
     async def on_message(self, message):
         if message.author.bot:
             return
-        if str(self.client.user.id) in message.content:
-            await message.channel.send(utils.emote_load('kohaku-ping'))
-        for (key, gif) in constants.GIFS.items():
-            if key in message.content.lower().split(' '):
-                await message.channel.send(embed=utils.embed_create(image=gif))
+        db_path = 'users/{}'.format(message.author.id)
+        data = constants.FIRE_CON.get(db_path)
+        xp_gain = random.randint(2,10)
+        if data == None:
+            constants.FIRE_CON.setValue(db_path, {'rank' : 0, 'prestige' : 0, 'xp' : xp_gain})
+        else:
+            data['xp'] += xp_gain
+            if data['xp'] + xp_gain > constants.MAX_EXP:
+                data['prestige'] += 1
+                data['xp'] += (xp_gain - constants.MAX_EXP)
+            constants.FIRE_CON.update(db_path, data)
+        now = datetime.utcnow()
+        if message.author.id in constants.TIMEOUT.keys() and now < constants.TIMEOUT[message.author.id]:
+            return
+        elif message.author.id in constants.TIMEOUT.keys(): # now >= constants.TIMEOUT (timeout runned out):
+            del (constants.TIMEOUT[message.author.id])
+        await self.client.process_commands(message)
 
     @commands.Cog.listener()
     async def on_ready(self):
