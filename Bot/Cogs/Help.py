@@ -1,6 +1,4 @@
-''' HELP.py - INFORMATION TOOL
-    Does what a help command should do. (duh.)
-'''
+''' HELP.py - INFORMATION TOOL'''
 # -----------------------------------------------------------------------------------------------
 # >> Imports
 import Bot.Backend.checks as checks
@@ -14,53 +12,46 @@ class Help(commands.Cog):
     def __init__(self, client):
         self.client = client
         self.cmds = {}
+        self.footer = {'text' : 'Parameters : <...> | Optional Parameters : (<...>) | List of parameters : [<...>]'}
 
-    def shortDescription_default(self):
-        return '**Under Construction**'
-
-    def longDescription_default(self):
+    def help_default(self):
         return [utils.embed_create(title='**Under Construction**', description='Either Nia forgot this embed, this embed is still under construction or something went terribly wrong ewe.'), None]
 
-    def shortDescription(self):
-        return 'Helps with commands and modules'
-
-    def longDescription(self):
-        title='Help'
-        desc = 'I was written in {} by <@!{}>.\nLook at my [spaghetti code]({}) and [my upcoming features]({})!\n\n_For more infos regarding one module, use `{}help <module>`_\n\n_**Modules:**_'.format(
-            utils.emote_load('python'), constants.OWNER, constants.GITHUB_URL_CODE, constants.GITHUB_URL_BOARD, constants.INVOKE)
-        modules = sorted(self.cmds.items(), key=(lambda  x: x[0]))
-        fields = []
-        for (cmd, cog) in modules:
-            try:
-                short = cog.shortDescription()
-            except:
-                short = self.shortDescription_default()
-            fields.append(['`{}{}`'.format(constants.INVOKE, cmd), '_{}_'.format(short), False])
-        return [utils.embed_create(title=title, description=desc, fields=fields, thumbnail=self.client.user.avatar_url), None]
+    def help(self, footer):
+        title='Kohaku'
+        description = 'Wasshoi~!\n Type `{}help <command>` to see more details about  a particular command.'.format(constants.INVOKE)
+        fields = [ [None, False],
+            [':clipboard: General', '`help`,`status`, `server`, `ping`', False],
+            [':scroll: Game Information', '`ac`,`dbd`,`ff`,`fgo`,`pkm`', True],
+            [':game_die: Games', '`8b`, `nhie`, `wyr`', True],
+            [None, False],
+            [':gear: Source', '[Spaghetti code]({}), [Upcoming Features]({})'.format(constants.GITHUB_URL_CODE, constants.GITHUB_URL_BOARD), False]
+        ]
+        return utils.embed_create(title=title, description=description, fields=fields, footer=footer)
 
     def isSecret(self):
         return False
 
-    @commands.command(pass_context=True)
-    async def help(self, ctx, *, param):
+    @commands.command(pass_context=True, name='help')
+    async def _help(self, ctx, *, param):
         param = param.lower()
         if self.cmds == {}:
             self.load_cmd_meta()
         if param in self.cmds.keys():
             try:
-                result = self.cmds[param].longDescription()
+                result = self.cmds[param].help(self.footer)
             except:
-                result = self.longDescription_default()
+                result = self.help_default()
             if not isinstance(result, list):
-                result = [result]
+                result = [result,  None]
             await utils.embed_send(ctx, result[0],file=result[1])
         else:
-            await self.help(ctx, param='help')
+            await self._help(ctx, param='help')
 
-    @help.error
+    @_help.error
     async def error_help(self, ctx, error):
         if isinstance(error, commands.MissingRequiredArgument):
-            await self.help(ctx, param='help')
+            await self._help(ctx, param='help')
 
     def load_cmd_meta(self):
         for cog in self.client.cogs.values():
