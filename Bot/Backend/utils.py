@@ -1,4 +1,4 @@
-''' UTILS.py - Stores Bot Functions like Image concat, etc. '''
+''' UTILS.py '''
 # > ---------------------------------------------------------------------------
 # > Imports
 from io import BytesIO
@@ -12,12 +12,6 @@ import requests
 
 # > ---------------------------------------------------------------------------
 # > General
-def emote_load(key):
-    '''Loads an emote from the internal list or sends a '<key>' back if the emote was not found.'''
-    if key in constants.EMOTES.keys():
-        return constants.EMOTES[key]
-    return '<{}>'.format(key)
-
 def map_function(data):
     return data[0](*data[1:])
 
@@ -34,7 +28,7 @@ def embed_create(title=Embed.Empty, description=Embed.Empty, fields=[], image=No
     if fields == []:
         count = 1
     else:
-        count = math.ceil(len(fields)/constants.EMBED_MAX_FIELD)
+        count = math.ceil(len(fields)/25)
     description = [description] + [Embed.Empty] * (count-1)
     embeds = []
     for i in range(0, count):
@@ -143,6 +137,32 @@ def json_store(local_path, json_content):
     '''Stores the given content at the given path.'''
     with open(local_path, 'w', encoding="utf-8") as f:
         f.write(json.dumps(json_content, ensure_ascii=False, indent=4))
+
+# > Levels
+def total_exp(lvl):
+    ''' CONSTANT_A * (this_level^2) + Total_xp_for_level_before = Total_xp_for_this_level'''
+    if lvl < 1:
+        return None
+    elif lvl <= len(constants.LVLS):
+        return constants.LVLS[lvl-1]
+    else: # lvl > len(constants.LVLS)
+        for i in range(len(constants.LVLS), lvl+1):
+            constants.LVLS.append(10 * ((i+1)**2) + constants.LVLS[i-1])
+        return constants.LVLS[lvl-1]
+
+def level(experience):
+    if experience > constants.LVLS[-1]:
+        i = len(constants.LVLS) + 1
+        total_exp(i)
+        return level(experience)
+    elif experience == constants.LVLS[-1]:
+        return len(constants.LVLS)
+    else: #xp < LEVEL[-1]
+        for i in range(0,len(constants.LVLS)):
+            if experience == constants.LVLS[i]:
+                return i+1
+            elif experience < constants.LVLS[i]:
+                return i
 
 # > Logger
 logging.basicConfig(format='%(levelname)s-%(message)s', level=logging.INFO)
