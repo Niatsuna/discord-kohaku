@@ -23,8 +23,8 @@ class Help(commands.Cog):
         title='Kohaku'
         description = 'Wasshoi~!\n Type `{}help <command>` to see more details about  a particular command.'.format(constants.INVOKE)
         fields = [ [None, False],
-            [':clipboard: General', '`help`,`status`, `server`, `ping`', False],
-            [':scroll: Game Information', '`ac`,`dbd`,`ff`,`fgo`,`pkm`', True],
+            [':clipboard: General', '`help`,`status`, `server`, `ping`, `gif`', False],
+            [':scroll: Game Information', '`ac`, `dbd`, `ff`, `fgo`, `gi`, `pkm`', True],
             [':game_die: Games', '`8b`, `nhie`, `wyr`', True],
             [None, False],
             [':gear: Source', '[Spaghetti code]({}), [Upcoming Features]({})'.format(constants.GITHUB_URL_CODE, constants.GITHUB_URL_BOARD), False]
