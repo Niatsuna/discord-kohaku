@@ -47,7 +47,7 @@ class Timeout(commands.Cog):
     @timeout.error
     async def timeout_error(self,ctx, error):
         if isinstance(error, commands.MissingRequiredArgument):
-            await utils.embed_send(ctx, constants.ERROR_MISSIM_PARAM)
+            await utils.embed_send(ctx, constants.ERROR_MISSING_PARAM)
             return
 
 
