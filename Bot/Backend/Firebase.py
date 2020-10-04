@@ -25,7 +25,8 @@ class Firebase():
         ref.set(value)
 
     def delete(self, path):
-        self.setValue(path, {})
+        ref = db.reference(path)
+        ref.delete()
 
     def get(self, path):
         ref = db.reference(path)
