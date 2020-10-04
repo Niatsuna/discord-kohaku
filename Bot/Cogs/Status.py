@@ -7,6 +7,8 @@ import Bot.Backend.constants as constants
 import Bot.Backend.utils as utils
 from math import floor
 
+ALIASES = ['s']
+
 # > ---------------------------------------------------------------------------
 class Status(commands.Cog):
 
@@ -21,7 +23,7 @@ class Status(commands.Cog):
     def isSecret(self):
         return False
 
-    @commands.command(pass_context=True)
+    @commands.command(pass_context=True,  aliases=ALIASES)
     async def status(self, ctx, *, param):
         param = param.split(' ')
         for i in range(0, len(param)):

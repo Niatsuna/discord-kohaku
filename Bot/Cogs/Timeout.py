@@ -8,6 +8,8 @@ import Bot.Backend.constants as constants
 import Bot.Backend.utils as utils
 from datetime import datetime, timedelta
 
+ALIASES = ['t', 'to']
+
 # > ---------------------------------------------------------------------------
 class Timeout(commands.Cog):
 
@@ -23,7 +25,7 @@ class Timeout(commands.Cog):
         return False
 
     @commands.check(checks.check_is_mod)
-    @commands.command(pass_context=True)
+    @commands.command(pass_context=True, aliases=ALIASES)
     async def timeout(self, ctx, *, param):
         param = param.split(' ')
         param[0] = param[0].replace('<', '').replace('@', '').replace('!', '').replace('>', '')
@@ -34,6 +36,11 @@ class Timeout(commands.Cog):
         user = self.client.get_user(id_)
         if user == None:
             await utils.embed_send(ctx, utils.embed_create(title='User not found.', description='Couldn\'t find user with id/mention: `{}`'.format(param[0])))
+            return
+        caller = constants.FIRE_CON.get('users/{}'.format(ctx.message.author.id))
+        to_time_out = constants.FIRE_CON.get('users/{}'.format(id_))
+        if to_time_out != None and caller['rank'] < to_time_out['rank']:
+            await utils.embed_send(ctx, constants.ERROR_PERMISSION_DENIED)
             return
         try:
             t = int(param[1])
