@@ -3,9 +3,11 @@
 # > Imports
 import discord
 from discord.ext import commands
+import Bot.Backend.checks as checks
 import Bot.Backend.constants as constants
 import Bot.Backend.utils as utils
-from math import ceil
+
+ALIASES = ['srv']
 
 # > ---------------------------------------------------------------------------
 class Server(commands.Cog):
@@ -15,13 +17,18 @@ class Server(commands.Cog):
 
     def help(self, footer):
         title = 'Help Info: {}server'.format(constants.INVOKE)
-        description = 'Shows a quick information sheet about the server.\nNot available in DMs!\n\n**Usage: ** `{}server`'.format(constants.INVOKE)
+        if ALIASES != None and ALIASES != []:
+            alias = '**Aliases: ** {}\n'.format(' '.join(['`{}`'.format(x) for x in ALIASES]))
+        else:
+            alias = ''
+        description = 'Shows a quick information sheet about the server.\nNot available in DMs!\n\n{}\n**Usage: ** `{}server`'.format(alias, constants.INVOKE)
         return utils.embed_create(title=title, description=description, footer=footer)
 
     def isSecret(self):
         return False
 
-    @commands.command(pass_context=True)
+    @commands.check(not checks.check_is_dm)
+    @commands.command(pass_context=True, aliases=ALIASES)
     async def server(self, ctx, *, param):
         if ctx.message.channel.type == discord.ChannelType.private:
             return
@@ -38,7 +45,7 @@ class Server(commands.Cog):
         await utils.embed_send(ctx, utils.embed_create(title=title, fields=fields, thumbnail=thumbnail, footer=footer))
 
     @server.error
-    async def ping_error(self,ctx, error):
+    async def server_error(self,ctx, error):
         if isinstance(error, commands.MissingRequiredArgument):
             await self.server(ctx, param=str(ctx.message.author.id))
             return

@@ -6,6 +6,8 @@ from discord.ext import commands
 import Bot.Backend.constants as constants
 import Bot.Backend.utils as utils
 
+ALIASES = ['h']
+
 # -----------------------------------------------------------------------------------------------
 class Help(commands.Cog):
 
@@ -32,7 +34,7 @@ class Help(commands.Cog):
     def isSecret(self):
         return False
 
-    @commands.command(pass_context=True, name='help')
+    @commands.command(pass_context=True, name='help', aliases=ALIASES)
     async def _help(self, ctx, *, param):
         param = param.lower()
         if self.cmds == {}:
@@ -55,8 +57,11 @@ class Help(commands.Cog):
 
     def load_cmd_meta(self):
         for cog in self.client.cogs.values():
-            if not checks.check_is_secret(cog) and cog.get_commands != []:
-                self.cmds[cog.get_commands()[0].name] = cog
+            if not checks.check_is_secret(cog) and cog.get_commands() != []:
+                cmd = cog.get_commands()[0]
+                self.cmds[cmd.name] = cog
+                for alias in cmd.aliases:
+                    self.cmds[alias] = cog
 
 # -----------------------------------------------------------------------------------------------
 def setup(client):
