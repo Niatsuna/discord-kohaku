@@ -30,8 +30,6 @@ class Server(commands.Cog):
     @commands.check(not checks.check_is_dm)
     @commands.command(pass_context=True, aliases=ALIASES)
     async def server(self, ctx, *, param):
-        if ctx.message.channel.type == discord.ChannelType.private:
-            return
         s = ctx.message.channel.guild
         title = 'Server: {}'.format(s.name)
         thumbnail = s.icon_url
