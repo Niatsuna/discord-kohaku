@@ -1,6 +1,7 @@
 ''' CHECKS.py '''
 # > ---------------------------------------------------------------------------
 # > Imports
+import discord
 import Bot.Backend.constants as constants
 
 # > ---------------------------------------------------------------------------
@@ -30,6 +31,9 @@ def check_is_admin(ctx):
 def check_is_owner(ctx):
     return check_is_rank(ctx.message.author.id, 'Owner')
 
+# > Channel
+def check_is_dm(ctx):
+    return ctx.message.channel.type == discord.ChannelType.private
 
 # > Secret
 def check_is_secret(cog):
