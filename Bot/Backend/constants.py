@@ -25,6 +25,9 @@ ERROR_WHOOPS            = Embed(description='Whooops! Something went totally wro
 FIRE_URL = 'https://discord-kohaku.firebaseio.com/'
 FIRE_CON = None
 
+# > GIF
+GIF_URL = 'https://api.tenor.com/v1/search?q={}&limit=50'
+
 # > GitHub
 GITHUB_URL_CODE = 'https://github.com/Niatsuna/discord-kohaku'
 GITHUB_URL_BOARD = 'https://github.com/Niatsuna/discord-kohaku/projects/1'
