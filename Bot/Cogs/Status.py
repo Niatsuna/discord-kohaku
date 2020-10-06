@@ -7,7 +7,7 @@ import Bot.Backend.constants as constants
 import Bot.Backend.utils as utils
 from math import floor
 
-ALIASES = ['s']
+ALIASES = ['s', 'profile']
 
 # > ---------------------------------------------------------------------------
 class Status(commands.Cog):
@@ -39,7 +39,7 @@ class Status(commands.Cog):
             elif not user.bot:
                 data = constants.FIRE_CON.get('users/{}'.format(id_))
                 if data == None:
-                    data = {'rank' : 0, 'prestige' : 0, 'xp' : 0}
+                    data = constants.EMPTY_USER
                     constants.FIRE_CON.setValue('users/{}'.format(id_), data)
                 title = 'Profile: {}'.format(user.display_name)
                 thumbnail = user.avatar_url
@@ -48,7 +48,10 @@ class Status(commands.Cog):
                 if data['prestige'] > 0:
                     description += ' | **Prestige: ** {}'.format(data['prestige'])
                 description += '\n**Rank: ** {}\n**Created Account: ** {}'.format(constants.RANK_MAP[data['rank']], user.created_at.strftime('%d.%m.%Y, (%H:%M)'))
-                await utils.embed_send(ctx, utils.embed_create(title=title, description=description, thumbnail=thumbnail))
+                fields = []
+                if data['description'] != '-':
+                    fields.append(['Description', data['description'], False])
+                await utils.embed_send(ctx, utils.embed_create(title=title, description=description, fields=fields, thumbnail=thumbnail))
 
     @status.error
     async def status_error(self,ctx, error):

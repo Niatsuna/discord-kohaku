@@ -9,7 +9,9 @@ from os.path import isfile, join
 COGS = [f[:-3] for f in listdir('Bot/Cogs/') if isfile(join('Bot/Cogs/', f))]
 COLOR = 0x1b6c8f
 EMPTY_CHAR = '\u200b'
+EMPTY_USER = {'rank' : 0, 'prestige' : 0, 'xp' : 0, 'description' : '-'}
 INVOKE = '-'
+MISSING_PICTURE = 'https://cdn.discordapp.com/attachments/637574177657847809/762666189524172800/question_mark.png'
 RANK_MAP = {
     0 : 'Member', 1335 : 'Moderator', 1336 : 'Admin', 1337 : 'Owner'
 }

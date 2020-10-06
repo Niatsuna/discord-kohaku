@@ -22,7 +22,7 @@ class Add(commands.Cog):
             alias = '**Aliases: ** {}\n'.format(' '.join(['`{}`'.format(x) for x in ALIASES]))
         else:
             alias = ''
-        description = 'Adds someone / something to a list.\nCan only be used by admins or higher!\nLists are: gif, emote and the specific ranks.\n\n{}**Usage: ** `{}add` `<list>` `(<key>)` `<gif-url/emote/person>`'.format(alias, constants.INVOKE)
+        description = 'Adds someone / something to a list.\nCan only be used by admins or higher!\nLists are: gif, emote and the specific ranks. Gif and emote require a additional key.\n\n{}**Usage: ** `{}add` `<list>` `(<key>)` `<gif-url/emote/person>`'.format(alias, constants.INVOKE)
         return utils.embed_create(title=title, description=description, footer=footer)
 
     def isSecret(self):
@@ -63,7 +63,7 @@ class Add(commands.Cog):
             return
         data = constants.FIRE_CON.get('users/{}'.format(user.id))
         if data == None:
-            data = {'prestige' : 0, 'xp' : 0}
+            data = constants.EMPTY_USER
         data['rank'] = rank
         constants.FIRE_CON.setValue('users/{}'.format(user.id), data)
         await utils.embed_send(ctx, utils.embed_create(title='Added {} to role {}'.format(user.display_name, param[0]), description='{} gave {} the role `{}`.'.format(ctx.message.author.mention, user.mention, param[0]),))

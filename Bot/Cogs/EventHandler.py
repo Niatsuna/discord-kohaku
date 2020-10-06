@@ -26,7 +26,9 @@ class EventHandler(commands.Cog):
         data = constants.FIRE_CON.get(db_path)
         xp_gain = random.randint(2,10)
         if data == None:
-            constants.FIRE_CON.setValue(db_path, {'rank' : 0, 'prestige' : 0, 'xp' : xp_gain})
+            data = constants.EMPTY_USER
+            data['xp'] = xp_gain
+            constants.FIRE_CON.setValue(db_path, data)
         else:
             data['xp'] += xp_gain
             if data['xp'] + xp_gain > constants.MAX_EXP:
