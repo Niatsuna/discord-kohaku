@@ -23,9 +23,10 @@ ERROR_PERMISSION_DENIED = Embed(description='You are not allowed to do that.', c
 ERROR_SEARCH_FAIL       = Embed(description='Couldn\'t find what you are looking for! Please check your spelling or try `{}help` for further information.'.format(INVOKE), color=COLOR)
 ERROR_WHOOPS            = Embed(description='Whooops! Something went totally wrong! Please contact an admin!', color=COLOR)
 
-# > Firebase
+# > Google
 FIRE_URL = 'https://discord-kohaku.firebaseio.com/'
 FIRE_CON = None
+GC_CON = None
 
 # > GIF
 GIF_URL = 'https://api.tenor.com/v1/search?q={}&limit=50'

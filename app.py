@@ -9,6 +9,7 @@ import Bot.Backend.constants as constants
 import sys
 import Bot.Backend.utils as utils
 import json
+import gspread
 from Bot.Backend.Firebase import Firebase
 
 # -----------------------------------------------------------------------------------------------
@@ -17,9 +18,11 @@ client = commands.Bot(command_prefix=constants.INVOKE)
 client.remove_command('help') # Removes default help command
 try:
     _credentials = json.loads(sys.argv[2])
+    utils.json_store('fire_cred.json', _credentials)
 except:
     _credentials = utils.json_load('fire_cred.json')
 constants.FIRE_CON = Firebase(_credentials)
+constants.GC_CON = gspread.service_account(filename='fire_cred.json')
 
 @client.event
 async def on_message(message):
