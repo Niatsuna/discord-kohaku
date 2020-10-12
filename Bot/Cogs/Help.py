@@ -24,7 +24,7 @@ class Help(commands.Cog):
         description = 'Wasshoi~!\n Type `{}help <command>` to see more details about  a particular command.'.format(constants.INVOKE)
         fields = [ [None, False],
             [':clipboard: General', '`help`,`status`, `server`, `ping`, `gif`', False],
-            [':scroll: Game Information', '`ac`, `dbd`, `ff`, `fgo`, `gi`, `pkm`', True],
+            [':scroll: Game Information', '`animalcrossing`, `deadbydaylight`, `finalfantasyxiv`, `fategrandorder`, `genshinimpact`, `pokemon`', True],
             [':game_die: Games', '`8b`, `nhie`, `wyr`', True],
             [None, False],
             [':gear: Source', '[Spaghetti code]({}), [Upcoming Features]({})'.format(constants.GITHUB_URL_CODE, constants.GITHUB_URL_BOARD), False]
@@ -38,7 +38,7 @@ class Help(commands.Cog):
     async def _help(self, ctx, *, param):
         param = param.lower()
         if self.cmds == {}:
-            self.load_cmd_meta()
+            self.cmds = utils.load_cmd_meta(self.client)
         if param in self.cmds.keys():
             try:
                 result = self.cmds[param].help(self.footer)
@@ -54,14 +54,6 @@ class Help(commands.Cog):
     async def error_help(self, ctx, error):
         if isinstance(error, commands.MissingRequiredArgument):
             await self._help(ctx, param='help')
-
-    def load_cmd_meta(self):
-        for cog in self.client.cogs.values():
-            if not checks.check_is_secret(cog) and cog.get_commands() != []:
-                cmd = cog.get_commands()[0]
-                self.cmds[cmd.name] = cog
-                for alias in cmd.aliases:
-                    self.cmds[alias] = cog
 
 # -----------------------------------------------------------------------------------------------
 def setup(client):
