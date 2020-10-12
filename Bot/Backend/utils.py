@@ -2,18 +2,32 @@
 # > ---------------------------------------------------------------------------
 # > Imports
 from io import BytesIO
+import Bot.Backend.checks as checks
 import Bot.Backend.constants as constants
 from discord import Embed, File
 from PIL import Image
 import json
 import logging
 import math
+import pyexcel
 import requests
 
 # > ---------------------------------------------------------------------------
 # > General
+def load_cmd_meta(client, with_aliases=True):
+    ''' Creates a dict which maps aliases and names to cogs '''
+    result = {}
+    for cog in client.cogs.values():
+        if not checks.check_is_secret(cog) and cog.get_commands != []:
+            cmd = cog.get_commands()[0]
+            result[cmd.name] = cog
+            if with_aliases:
+                for alias in cmd.aliases:
+                    result[alias] = cog
+    return result
+
 def map_function(data):
-    ''' Maps data with the syntax\n 
+    ''' Maps data with the syntax\n
     [function, param1, param2, ...]\n
     as\n
     function(param1, param2, ...)'''
@@ -191,40 +205,26 @@ def warn(message):
     logger.warning(message)
 
 # > Spreadsheet
-
-def spreadsheet_to_json(key, sheets):
-    ''' Converts a public google spreadsheet to json. Each sheet will be converted to an array of rows and every row to a dict (keys are first row). '''
-    result = {}
-    for sheet in sheets:
-        # > Get Sheet
-        URL = 'https://docs.google.com/spreadsheets/d/{}/gviz/tq?tqx=out:csv&sheet={}'.format(key, sheet)
-        try:
-            response = str(requests.get(URL).content).split('\\n')
-        except:
-            response = None
-        # > Convert Sheet to json
-        content = []
-        if response != None:
-            # > Clear up rows (Delete extra characters on the beginning and end)
-            c_rows = []
-            for i in range(0, len(response)):
-                line = response[i].split(',')
-                if i == 0:
-                    line[0] = line[0][2:]
-                elif i == len(response) - 1:
-                    line[-1] = line[-1][:-2]
-                for j in range(0, len(line)):
-                    line[j] = line[j][1:-1].replace('\\\'', '\'')
-                    if line[j] == 'TRUE' or line[j] == 'FALSE':
-                        line[j] = (line[j] == 'TRUE')
-                c_rows.append(line)
-            # > Use keys to convert each row into a dict
-            keys = c_rows[0] # First row = Keys
-            for i in range(0, len(c_rows[1:])):
-                row = {}
-                for j in range(0, len(keys)):
-                    row[keys[j]] = c_rows[i][j]
-                content.append(row)
-        # > Store converted content in json
-        result[sheet] = content
+def spreadsheet_to_json(key, sheet):
+    result = []
+    # > Get Sheet
+    URL = 'https://docs.google.com/spreadsheets/d/{}/gviz/tq?tqx=out:csv&sheet={}'.format(key, sheet)
+    try:
+        response = requests.get(URL)
+    except:
+        response = None
+    if response != None:
+        sheet = list(pyexcel.get_sheet(file_type='csv', file_content=response.content).rows())
+        keys = sheet[0]
+        for i in range(1, len(sheet)):
+            content = {}
+            row = sheet[i]
+            for j in range(0, len(keys)):
+                entry = row[j]
+                if entry == 'TRUE' or entry == 'FALSE':
+                    entry = (entry == 'TRUE')
+                elif entry == '':
+                    entry = None
+                content[keys[j]] = entry
+            result.append(content)
     return result
