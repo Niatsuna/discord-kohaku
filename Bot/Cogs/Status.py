@@ -7,7 +7,7 @@ import Bot.Backend.constants as constants
 import Bot.Backend.utils as utils
 from math import floor
 
-ALIASES = ['s', 'profile']
+ALIASES = ['s', 'profile', 'pr']
 
 # > ---------------------------------------------------------------------------
 class Status(commands.Cog):
@@ -17,7 +17,11 @@ class Status(commands.Cog):
 
     def help(self, footer):
         title = 'Help Info: {}status'.format(constants.INVOKE)
-        description = 'Shows the profile(s) of named user(s).\nSending without parameters will show the profile of the author.\n\n**Usage: ** `{}status` `([<mention>/<id>])`'.format(constants.INVOKE)
+        if ALIASES != None and ALIASES != []:
+            alias = '**Aliases: ** {}\n'.format(' '.join(['`{}`'.format(x) for x in ALIASES]))
+        else:
+            alias = ''
+        description = 'Shows the profile(s) of named user(s).\nSending without parameters will show the profile of the author.\n{}\n**Usage: ** `{}status` `([<mention>/<id>])`'.format(alias, constants.INVOKE)
         return utils.embed_create(title=title, description=description, footer=footer)
 
     def isSecret(self):

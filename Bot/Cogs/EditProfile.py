@@ -43,10 +43,14 @@ class EditProfile(commands.Cog):
             if aspect in data.keys():
                 if len(sp) == 1:
                     data[aspect] = '-'
+                    success.append(aspect)
                 else:
                     inp = ' '.join(sp[1:]).strip()
-                    data[aspect] = inp
-                success.append(aspect)
+                    if len(inp) > 1024 or len(inp.split('\n')) > 20: # Field Value max 1024 chars + no more then 20 lines
+                        failed.append(aspect)
+                    else:
+                        data[aspect] = inp
+                        success.append(aspect)
             else:
                 failed.append(aspect)
         constants.FIRE_CON.update(db_path, data)
