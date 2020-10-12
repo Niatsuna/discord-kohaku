@@ -34,7 +34,7 @@ class Reload(commands.Cog):
     async def reload(self, ctx, *, param):
         param = param.lower().split(' ')
         if self.cmds == {}:
-            self.load_cmd_meta()
+            self.cmds = utils.load_cmd_meta(self.client)
         if param[0].lower() == 'all':
             param = self.cmds.keys()
         success = []
@@ -71,15 +71,6 @@ class Reload(commands.Cog):
         if isinstance(error, commands.MissingRequiredArgument):
             await utils.embed_send(ctx, constants.ERROR_MISSING_PARAM)
             return
-
-    def load_cmd_meta(self):
-        for cog in self.client.cogs.values():
-            if not checks.check_is_secret(cog) and cog.get_commands() != []:
-                cmd = cog.get_commands()[0]
-                self.cmds[cmd.name] = cog
-                for alias in cmd.aliases:
-                    self.cmds[alias] = cog
-
 
 # > ---------------------------------------------------------------------------
 def setup(client):
