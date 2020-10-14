@@ -49,7 +49,7 @@ class RockPaperScissors(commands.Cog):
             elif result == 'KOHAKU':
                 desc = 'Hehe! I won!'
             else:
-                desc = 'Congrats! You won! I know you could do it!'
+                desc = 'Congrats! You won! I knew you could do it!'
             await message.edit(embed=utils.embed_create(title='Rock-Paper-Scissors : Results!', description='Kohaku: {}\n{} : {}\n\n{}'.format(choice, ctx.message.author.mention, reaction.emoji, desc)))
 
 
