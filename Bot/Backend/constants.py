@@ -26,7 +26,6 @@ ERROR_WHOOPS            = Embed(description='Whooops! Something went totally wro
 # > Google
 FIRE_URL = 'https://discord-kohaku.firebaseio.com/'
 FIRE_CON = None
-GC_CON = None
 
 # > GIF
 GIF_URL = 'https://api.tenor.com/v1/search?q={}&limit=50'
@@ -38,3 +37,9 @@ GITHUB_URL_BOARD = 'https://github.com/Niatsuna/discord-kohaku/projects/1'
 # > Levels
 LVLS = [0]
 MAX_EXP = 2000000000
+
+# > Never Have I Ever
+NHIE_URL = 'http://www.neverhaveiever.org'
+
+# > Would you rather
+WYR_URL = 'http://either.io/{}'
