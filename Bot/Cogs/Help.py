@@ -25,7 +25,7 @@ class Help(commands.Cog):
         fields = [ [None, False],
             [':clipboard: General', '`help`,`status`, `server`, `ping`, `gif`', False],
             [':scroll: Game Information', '`animalcrossing`, `deadbydaylight`, `finalfantasyxiv`, `fategrandorder`, `genshinimpact`, `pokemon`', True],
-            [':game_die: Games', '`8b`, `nhie`, `wyr`', True],
+            [':game_die: Games', '`magic8ball`, `neverhaveiever`, `wouldyourather`, `rockpaperscissors`', True],
             [None, False],
             [':gear: Source', '[Spaghetti code]({}), [Upcoming Features]({})'.format(constants.GITHUB_URL_CODE, constants.GITHUB_URL_BOARD), False]
         ]
