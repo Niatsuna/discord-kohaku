@@ -28,7 +28,7 @@ class Magic8Ball(commands.Cog):
     def isSecret(self):
         return False
 
-    @commands.command(pass_context=True, name='8b', aliases=ALIASES)
+    @commands.command(pass_context=True, aliases=ALIASES)
     async def neverhaveiever(self, ctx, *, param):
         try:
             response = requests.get(constants.NHIE_URL)

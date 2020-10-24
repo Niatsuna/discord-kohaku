@@ -9,7 +9,7 @@ import random
 import requests
 from bs4 import BeautifulSoup
 
-ALIASES = ['wouldyourather']
+ALIASES = ['wyr']
 
 # > ---------------------------------------------------------------------------
 class WouldYouRather(commands.Cog):
