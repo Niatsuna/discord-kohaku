@@ -31,7 +31,7 @@ class RockPaperScissors(commands.Cog):
 
     @commands.command(pass_context=True, aliases=ALIASES)
     async def rockpaperscissors(self, ctx, *, param):
-        message = await utils.embed_send(ctx, utils.embed_create(title='Rock-Paper-Scissors!', description='{}, please react with your choice!\n{}'.format(ctx.message.author.mention, self.desc)))
+        message = await utils.embed_send(ctx, utils.embed_create(title='Rock-Paper-Scissors!', description='{}, please react with your choice!\n{}'.format(ctx.message.author.mention, self.desc), footer={'text' : 'Voting time: 30s'}))
         for emote in self.emotes.keys():
             await message.add_reaction(emote)
         try:
