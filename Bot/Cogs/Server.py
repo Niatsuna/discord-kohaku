@@ -27,20 +27,41 @@ class Server(commands.Cog):
     def isSecret(self):
         return False
 
-    @commands.check(not checks.check_is_dm)
+    @commands.check(checks.check_is_guild)
     @commands.command(pass_context=True, aliases=ALIASES)
     async def server(self, ctx, *, param):
         s = ctx.message.channel.guild
         title = 'Server: {}'.format(s.name)
         thumbnail = s.icon_url
+        leaderboard = self.leaderboard(s)
         fields = [
             ['Owner', '<@{}>'.format(s.owner_id), False],
             ['Created', s.created_at.strftime('%d.%m.%Y, (%H:%M)'), True], ['Members', str(len(s.members)), True],
             ['Channels', str(len(s.channels)), True], ['Roles', str(len(s.roles)), True], ['Emojis', str(len(s.emojis)), True], [None, True],
-            ['Description', s.description, False]
+            ['Top 5 | Rank', '\n'.join(leaderboard[0]), True], ['Top 5 | XP', '\n'.join(leaderboard[1]), True]
         ]
         footer = { 'text' : 'ID: {}'.format(s.id) }
         await utils.embed_send(ctx, utils.embed_create(title=title, fields=fields, thumbnail=thumbnail, footer=footer))
+
+    def leaderboard(self, guild):
+        members = []
+        for mem in guild.members:
+            if not mem.bot:
+                db_path = 'users/{}'.format(mem.id)
+                data = constants.FIRE_CON.get(db_path)
+                if data == None:
+                    data = constants.EMPTY_USER
+                members.append([mem, data])
+        members_rank = sorted(members, key=(lambda x: x[1]['rank']), reverse=True)
+        members_xp = sorted(members, key=(lambda x: x[1]['xp']), reverse=True)
+        leaderboard = [[],[]]
+        for i in range(0, min(5,len(members_rank))):
+            entry = members_rank[i]
+            leaderboard[0].append('{} ({})'.format(entry[0].mention, constants.RANK_MAP[entry[1]['rank']]))
+        for i in range(0, min(5,len(members_xp))):
+            entry = members_xp[i]
+            leaderboard[1].append('{} (Lvl {})'.format(entry[0].mention, utils.level(entry[1]['xp'])))
+        return leaderboard
 
     @server.error
     async def server_error(self,ctx, error):
