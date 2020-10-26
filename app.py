@@ -4,6 +4,7 @@
 '''
 # -----------------------------------------------------------------------------------------------
 # >> Imports
+from discord import Intents
 from discord.ext import commands
 import Bot.Backend.constants as constants
 import sys
@@ -13,7 +14,8 @@ from Bot.Backend.Firebase import Firebase
 
 # -----------------------------------------------------------------------------------------------
 # >> Variables
-client = commands.Bot(command_prefix=constants.INVOKE)
+intents = Intents.all()
+client = commands.Bot(command_prefix=constants.INVOKE, intents=intents)
 client.remove_command('help') # Removes default help command
 try:
     _credentials = json.loads(sys.argv[2])
@@ -24,8 +26,8 @@ constants.FIRE_CON = Firebase(_credentials)
 
 @client.event
 async def on_message(message):
-    # Does nothing (Override deafult on_message)
-    return
+    # Override default on_message (get's filled in EventHandler)
+   return
 
 # -----------------------------------------------------------------------------------------------
 # >> Extensions
