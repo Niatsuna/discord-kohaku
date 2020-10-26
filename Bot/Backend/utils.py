@@ -225,7 +225,7 @@ def spreadsheet_to_json(key, sheet):
                     entry = (entry == 'TRUE')
                 elif entry == '':
                     entry = None
-                elif entry.startswith('ARRAY('):
+                elif isinstance(entry, str) and entry.startswith('ARRAY('):
                     entry = entry[6:-1].split(', ')
                 content[keys[j]] = entry
             result.append(content)
