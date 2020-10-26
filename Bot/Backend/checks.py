@@ -35,6 +35,9 @@ def check_is_owner(ctx):
 def check_is_dm(ctx):
     return ctx.message.channel.type == discord.ChannelType.private
 
+def check_is_guild(ctx):
+    return (not check_is_dm(ctx)) # Because Bots can't join private groups only DMs and Guilds are possible
+
 # > Secret
 def check_is_secret(cog):
     try:
