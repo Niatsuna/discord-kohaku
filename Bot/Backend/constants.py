@@ -18,7 +18,8 @@ RANK_MAP = {
 TIMEOUT = {}
 
 # > Error
-ERROR_MISSING_PARAM      = Embed(description='Please give me something to work with or try `{}help` for futher information.'.format(INVOKE), color=COLOR)
+ERROR_LOCKED            = Embed(description='This function is currently locked (not behind a paywall), because of development.', color=COLOR)
+ERROR_MISSING_PARAM     = Embed(description='Please give me something to work with or try `{}help` for futher information.'.format(INVOKE), color=COLOR)
 ERROR_PERMISSION_DENIED = Embed(description='You are not allowed to do that.', color=COLOR)
 ERROR_SEARCH_FAIL       = Embed(description='Couldn\'t find what you are looking for! Please check your spelling or try `{}help` for further information.'.format(INVOKE), color=COLOR)
 ERROR_WHOOPS            = Embed(description='Whooops! Something went totally wrong! Please contact an admin!', color=COLOR)
