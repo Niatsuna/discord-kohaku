@@ -39,9 +39,7 @@ class GenshinImpact(commands.Cog):
 
     @commands.command(pass_context=True, aliases=ALIASES)
     async def genshinimpact(self, ctx, *, param):
-        param = param.lower().strip()
-
-        await utils.embed_send(ctx, utils.embed_create(title='Ping : {}ms'.format(ceil(self.client.latency*1000))))
+        await utils.embed_send(ctx, constants.ERROR_LOCKED)
 
     @genshinimpact.error
     async def genshinimpact_error(self,ctx, error):
