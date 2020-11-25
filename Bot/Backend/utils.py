@@ -26,6 +26,13 @@ def load_cmd_meta(client, with_aliases=True):
                     result[alias] = cog
     return result
 
+def load_emote(key):
+    data = constants.FIRE_CON.get('emote/{}'.format(key))
+    if data == None:
+        return '「{}」'.format(key)
+    return data
+    
+
 def map_function(data):
     ''' Maps data with the syntax\n
     [function, param1, param2, ...]\n
