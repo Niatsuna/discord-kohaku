@@ -130,3 +130,5 @@ dmypy.json
 
 # Ignore Firebase_credentials (because noone needs to know these ;) )
 fire_cred.json
+
+.vscode/*
