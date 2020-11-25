@@ -23,6 +23,7 @@ class AnimalCrossing(commands.Cog):
         self.key = '1A1o0oesDUh5PCzu42UA47nYOfUaoFaRTNnEhnmsDdCw'
         self.sheets = ['AC - Art', 'AC - Bug', 'AC - Fish', 'AC - Fossils', 'AC - Sea creatures', 'AC - Songs', 'AC - Villagers']
         self.resource = utils.json_load('Bot/Resources/json/animal_crossing.json')
+        self.sternis = utils.load_emote('ac-sternis')
 
     def help(self, footer):
         title = 'Help Info: {}animalcrossing'.format(constants.INVOKE)
@@ -96,8 +97,25 @@ class AnimalCrossing(commands.Cog):
         except:
             return False
 
+    def _search_list(self, resource, name):
+        for data in resource:
+            if name in data['name'].lower() or name in data['name_de'].lower():
+                return data
+        return None
+
     async def search_fossil(self, ctx, name):
-        return False
+        fossils = self.resource['AC - Fossils']
+        data = self._search_list(fossils, name)
+        if data == None:
+            return False
+        title = '{} | {}'.format(data['name'], data['name_de'])
+        description = '**Price:** {} {}\n**Collection:** {}\n'.format(data['price'], self.sternis, data['part-of'].capitalize())
+        fields = [['Blathers\' phrase', data['museum-phrase'], False]]
+        await utils.embed_send(ctx, utils.embed_create(title=title, description=description, fields=fields, thumbnail=data['image']))
+        return True
+
+    async def search_fish(self, ctx, name):
+        
 
 
 
