@@ -53,7 +53,7 @@ class Roll(commands.Cog):
             await utils.embed_send(ctx, constants.ERROR_WHOOPS)
             return
 
-        if amount1 < 1 or dice_type < 2 or amount2 < 1:
+        if amount1 < 1 or amount1 > 500 or dice_type < 2 or amount2 < 1:
             await utils.embed_send(ctx, constants.ERROR_WHOOPS)
             return
         
