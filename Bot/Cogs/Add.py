@@ -56,11 +56,10 @@ class Add(commands.Cog):
             return
         caller_key = str(ctx.message.author.id)
         user_key = param[1].replace('<', '').replace('@', '').replace('!', '').replace('>', '')
-
+        user = self.client.get_user(int(user_key))
         if user_key in constants.USER_DATA.keys():
             data = constants.USER_DATA[user_key]
         else:
-            user = self.client.get_user(int(user_key))
             if user == None:
                 await utils.embed_send(ctx, utils.embed_create(title='User not found.', description='Couldn\'t find user with id/mention: `{}`'.format(param[1])))
                 return
@@ -68,11 +67,13 @@ class Add(commands.Cog):
             constants.USER_DATA[user_key] = data
 
         if caller_key in constants.USER_DATA.keys():
-            if caller_key['rank'] <= rank or caller_key['rank'] <= user_key['rank']:
+            caller = constants.USER_DATA[caller_key]
+            print(caller)
+            if caller['rank'] <= rank or caller['rank'] <= data['rank']:
                 await utils.embed_send(ctx, constants.ERROR_PERMISSION_DENIED)
                 return
         else:
-            constants.USER_DATA[caller_key] = constants.EMPTY_USER
+            constants.USER_DATA[caller_key] = deepcopy(constants.EMPTY_USER)
             await utils.embed_send(ctx, constants.ERROR_PERMISSION_DENIED)
             return
         
