@@ -6,6 +6,7 @@ from discord.ext import commands
 import Bot.Backend.constants as constants
 import Bot.Backend.utils as utils
 from math import floor
+from copy import deepcopy
 
 ALIASES = ['s', 'profile', 'pr']
 
@@ -43,7 +44,7 @@ class Status(commands.Cog):
             elif not user.bot:
                 key = str(id_)
                 if key in constants.USER_DATA.keys():
-                    data = constants.USER_DATA[key]
+                    data = deepcopy(constants.USER_DATA[key])
                 else:
                     data = constants.EMPTY_USER
                     constants.USER_DATA[key] = data

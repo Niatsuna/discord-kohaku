@@ -71,7 +71,7 @@ class EventHandler(commands.Cog):
         if key in constants.USER_DATA.keys():
             data = constants.USER_DATA[key]
         else:
-            data = constants.EMPTY_USER
+            data = deepcopy(constants.EMPTY_USER)
         data['xp'] += xp_gain
         if data['xp'] > constants.MAX_EXP:
             data['prestige'] += 1

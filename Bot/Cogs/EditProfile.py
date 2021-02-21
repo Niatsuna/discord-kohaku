@@ -6,6 +6,7 @@ from discord.ext import commands
 import Bot.Backend.constants as constants
 import Bot.Backend.utils as utils
 from math import ceil
+from copy import deepcopy
 
 ALIASES = ['edit', 'ep', 'profile-edit', 'pe']
 
@@ -35,7 +36,7 @@ class EditProfile(commands.Cog):
         if caller_key in constants.USER_DATA.keys():
             data = constants.USER_DATA[caller_key]
         else:
-            data = constants.EMPTY_USER
+            data = deepcopy(constants.EMPTY_USER)
         success = []
         failed = []
         for asp in aspects:

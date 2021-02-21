@@ -7,6 +7,7 @@ import Bot.Backend.checks as checks
 import Bot.Backend.constants as constants
 import Bot.Backend.utils as utils
 from datetime import datetime, timedelta
+from copy import deepcopy
 
 ALIASES = ['t', 'to']
 
@@ -41,11 +42,11 @@ class Timeout(commands.Cog):
         caller_key = str(ctx.message.author.id)
         user_key = str(id_)
         if caller_key not in constants.USER_DATA.keys():
-            constants.USER_DATA[caller_key] = constants.EMPTY_USER
+            constants.USER_DATA[caller_key] = deepcopy(constants.EMPTY_USER)
         caller = constants.USER_DATA[caller_key]
 
         if user_key not in constants.USER_DATA.keys():
-            constants.USER_DATA[user_key] = constants.EMPTY_USER
+            constants.USER_DATA[user_key] = deepcopy(constants.EMPTY_USER)
         user = constants.USER_DATA[user_key]
 
         if caller['rank'] <= user['rank']:

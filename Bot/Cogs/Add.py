@@ -6,6 +6,7 @@ from discord.ext import commands
 import Bot.Backend.checks as checks
 import Bot.Backend.constants as constants
 import Bot.Backend.utils as utils
+from copy import deepcopy
 
 ALIASES = []
 LISTS = [('gif', 3), ('emote', 3), ('moderator', 2), ('admin', 2), ('owner', 2)]
@@ -63,7 +64,7 @@ class Add(commands.Cog):
             if user == None:
                 await utils.embed_send(ctx, utils.embed_create(title='User not found.', description='Couldn\'t find user with id/mention: `{}`'.format(param[1])))
                 return
-            data = constants.EMPTY_USER
+            data = deepcopy(constants.EMPTY_USER)
             constants.USER_DATA[user_key] = data
 
         if caller_key in constants.USER_DATA.keys():
