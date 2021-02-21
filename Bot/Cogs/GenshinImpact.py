@@ -14,25 +14,9 @@ class GenshinImpact(commands.Cog):
 
     def __init__(self, client):
         self.client = client
-        self.key = '1sDTFrlxLNjLkLRHjIFK8HnKEbHtprsMHV8uHx7Csc1Y'
-        self.sheets = ['GI - Characters', 'GI - Skills', 'GI - Constellations', 'GI - Regions']
-        self.instant_map = {
-            ''
-        }
 
     def help(self, footer):
-        title = 'Help Info: {}genshinimpact'.format(constants.INVOKE)
-        if ALIASES != None and ALIASES != []:
-            alias = '**Aliases: ** {}\n'.format(' '.join(['`{}`'.format(x) for x in ALIASES]))
-        else:
-            alias = ''
-        params = [
-            '`<character>` - Looks up a named character', '`character(s)` - Shows a list of all released characters',
-            '`<skill>`  - Looks up a named skill', '`skill` `<character>` - Looks up all skills from a named character',
-            '`<region>` - Looks up a region', '`<element>` - Looks up a element', '`elements` - Shows a graph with element reactions & effectiveness']
-        description = 'This command is connected to the game \'Genshin Impact\' and can show information regarding this game.\n\n{}**Usage: **`{}genshinimpact` `parameter`\n**Parameters: **\n{}'.format(
-            alias, constants.INVOKE, '\n'.join(params))
-        return utils.embed_create(title=title, description=description, footer=footer)
+        raise Exception('Not done yet owo!')
 
     def isSecret(self):
         return False
@@ -48,10 +32,7 @@ class GenshinImpact(commands.Cog):
             return
 
     async def update(self):
-        result = {}
-        for sheet in self.sheets:
-            result[sheet] = utils.spreadsheet_to_json(self.key, sheet)
-        utils.json_store('Bot/Resources/json/genshin_impact.json', result)
+        return
 
 
 
