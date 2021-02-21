@@ -6,4 +6,8 @@ services:
     restart: on-failure
     environment:
       - BOT_TOKEN
-      - FIREBASE_CREDENTIALS
+      - FIRE_PRIVATE_KEY_ID
+      - FIRE_PRIVATE_KEY
+      - FIRE_CLIENT_EMAIL
+      - FIRE_CLIENT_ID
+      - FIRE_CLIENT_CERT_URL

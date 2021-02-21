@@ -17,7 +17,7 @@ RANK_MAP = {
     0 : 'Member', 1335 : 'Moderator', 1336 : 'Admin', 1337 : 'Owner'
 }
 TIMEOUT = {}
-VERSION = '2.0'
+VERSION = '2.0a'
 
 # > API
 API_URL = 'https://niatsuna.github.io/api-kohaku/data'

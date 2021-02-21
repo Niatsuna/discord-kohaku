@@ -18,7 +18,24 @@ intents = Intents.all()
 client = commands.Bot(command_prefix=constants.INVOKE, intents=intents)
 client.remove_command('help') # Removes default help command
 try:
-    _credentials = json.loads(sys.argv[2])
+    FIRE_PRIVATE_KEY_ID = sys.argv[2]
+    FIRE_PRIVATE_KEY = sys.argv[3]
+    FIRE_CLIENT_EMAIL = sys.argv[4]
+    FIRE_CLIENT_ID = sys.argv[5]
+    FIRE_CLIENT_CERT_URL = sys.argv[6]
+
+    _credentials = {
+    "type": "service_account",
+    "project_id": "discord-kohaku",
+    "private_key_id": FIRE_PRIVATE_KEY_ID,
+    "private_key": FIRE_PRIVATE_KEY,
+    "client_email": FIRE_CLIENT_EMAIL,
+    "client_id": FIRE_CLIENT_ID,
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": FIRE_CLIENT_CERT_URL
+    }
     utils.json_store('fire_cred.json', _credentials)
 except:
     _credentials = utils.json_load('fire_cred.json')
