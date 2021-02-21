@@ -9,7 +9,6 @@ from PIL import Image
 import json
 import logging
 import math
-import pyexcel
 import requests
 
 # > ---------------------------------------------------------------------------
@@ -210,30 +209,3 @@ def log(message):
 def warn(message):
     ''' Logs a warning into the console. '''
     logger.warning(message)
-
-# > Spreadsheet
-def spreadsheet_to_json(key, sheet):
-    result = []
-    # > Get Sheet
-    URL = 'https://docs.google.com/spreadsheets/d/{}/gviz/tq?tqx=out:csv&sheet={}'.format(key, sheet)
-    try:
-        response = requests.get(URL)
-    except:
-        response = None
-    if response != None:
-        sheet = list(pyexcel.get_sheet(file_type='csv', file_content=response.content).rows())
-        keys = sheet[0]
-        for i in range(1, len(sheet)):
-            content = {}
-            row = sheet[i]
-            for j in range(0, len(keys)):
-                entry = row[j]
-                if entry == 'TRUE' or entry == 'FALSE':
-                    entry = (entry == 'TRUE')
-                elif entry == '':
-                    entry = None
-                elif isinstance(entry, str) and entry.startswith('ARRAY('):
-                    entry = entry[6:-1].split(', ')
-                content[keys[j]] = entry
-            result.append(content)
-    return result
