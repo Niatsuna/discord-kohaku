@@ -8,7 +8,7 @@ import Bot.Backend.constants as constants
 import Bot.Backend.utils as utils
 from math import ceil
 
-ALIASES = ['r', 'rl']
+ALIASES = ['rl']
 
 # > ---------------------------------------------------------------------------
 class Reload(commands.Cog):

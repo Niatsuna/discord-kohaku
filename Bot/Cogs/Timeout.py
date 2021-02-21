@@ -37,11 +37,21 @@ class Timeout(commands.Cog):
         if user == None:
             await utils.embed_send(ctx, utils.embed_create(title='User not found.', description='Couldn\'t find user with id/mention: `{}`'.format(param[0])))
             return
-        caller = constants.FIRE_CON.get('users/{}'.format(ctx.message.author.id))
-        to_time_out = constants.FIRE_CON.get('users/{}'.format(id_))
-        if to_time_out != None and caller['rank'] < to_time_out['rank']:
+
+        caller_key = str(ctx.message.author.id)
+        user_key = str(id_)
+        if caller_key not in constants.USER_DATA.keys():
+            constants.USER_DATA[caller_key] = constants.EMPTY_USER
+        caller = constants.USER_DATA[caller_key]
+
+        if user_key not in constants.USER_DATA.keys():
+            constants.USER_DATA[user_key] = constants.EMPTY_USER
+        user = constants.USER_DATA[user_key]
+
+        if caller['rank'] <= user['rank']:
             await utils.embed_send(ctx, constants.ERROR_PERMISSION_DENIED)
             return
+        
         try:
             t = int(param[1])
         except:
