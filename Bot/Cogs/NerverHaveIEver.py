@@ -30,15 +30,8 @@ class Magic8Ball(commands.Cog):
 
     @commands.command(pass_context=True, aliases=ALIASES)
     async def neverhaveiever(self, ctx, *, param):
-        try:
-            response = requests.get(constants.NHIE_URL)
-            page = BeautifulSoup(response.content, 'lxml')
-        except Exception as ex:
-            exc = '{}: {}'.format(type(ex).__name__, ex)
-            utils.warn('> [Cmd:Nhie] Error during page scraping: {} |'.format(exc))
-            await utils.embed_send( ctx, constants.ERROR_WHOOPS)
-            return
-        description = page.find('h1').parent['url'][1:].replace('-',' ')
+        content = utils.json_load_url(constants.NHIE_URL)
+        description = '... {}'.format(content['statement'][17:].strip())
         message = await utils.embed_send(ctx, utils.embed_create(title='Never have I ever ...', description=description))
         await message.add_reaction('🍹')
         await message.add_reaction('❌')
