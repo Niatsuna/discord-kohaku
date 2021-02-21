@@ -1,5 +1,5 @@
 # Kohaku
-<img width="200" height="200" style="float: left; margin: 0 10px 0 0;" alt="Kohaku" src="Bot/Resources/img/Kohaku_Icon.png">
+<img width="100" height="100" style="float: left; margin: 0 10px 0 0;" alt="Kohaku" src="Bot/Resources/img/Kohaku_Icon.png">
 
 Kohaku is a open-source Discord bot coded in Python with [discord.py](https://discordpy.readthedocs.io/en/latest/) by Niatsuna.
 The bot is specified on certain games and is merely a hobby project.<br>
@@ -40,7 +40,7 @@ The default prefix is `-` and the command is `8b`.
         description = '🎱 {}'.format(a_range[random.randint(0, len(a_range)-1)])
         await utils.embed_send(ctx, utils.embed_create(title='"{}"'.format(param), description=description))
 ```
-<img width="250" style="float: right" alt="Example_Usage" src="https://cdn.discordapp.com/attachments/637574177657847809/810681932585238558/unknown.png">
+<img width="150" style="float: right" alt="Example_Usage" src="https://cdn.discordapp.com/attachments/637574177657847809/810681932585238558/unknown.png">
 
 As an Example:
 If you like to ask the question `Do you like it here?` the message should look like
