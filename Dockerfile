@@ -6,4 +6,4 @@ RUN pip3 install -r requirements.txt
 
 COPY . .
 
-CMD ["sh", "-c", "python3 app.py $BOT_TOKEN \"$FIRE_PRIVATE_KEY_ID\" \"$FIRE_PRIVATE_KEY\" \"$FIRE_CLIENT_EMAIL\" \"$FIRE_CLIENT_ID\" \"$FIRE_CLIENT_CERT_URL\""]
+CMD ["sh", "-c", "python3 app.py $BOT_TOKEN $FIRE_PRIVATE_KEY_ID \"$FIRE_PRIVATE_KEY\" $FIRE_CLIENT_ID"]
