@@ -9,5 +9,10 @@ deployment:
   script:
     - docker-compose build
     - BOT_TOKEN=$BOT_TOKEN docker-compose up -d
+    - FIRE_PRIVATE_KEY_ID=$FIRE_PRIVATE_KEY_ID docker-compose up -d
+    - FIRE_PRIVATE_KEY=$FIRE_PRIVATE_KEY docker-compose up -d
+    - FIRE_CLIENT_EMAIL=$FIRE_CLIENT_EMAIL docker-compose up -d
+    - FIRE_CLIENT_ID=$FIRE_CLIENT_ID docker-compose up -d
+    - FIRE_CLIENT_CERT_URL=$FIRE_CLIENT_CERT_URL docker-compose up -d
   only:
     - master
