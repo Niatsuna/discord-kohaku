@@ -41,15 +41,19 @@ class Timeout(commands.Cog):
 
         caller_key = str(ctx.message.author.id)
         user_key = str(id_)
+        user = self.client.get_user(int(user_key))
+        if user == None:
+            await utils.embed_send(ctx, utils.embed_create(title='User not found.', description='Couldn\'t find user with id/mention: `{}`'.format(param[1])))
+            return
         if caller_key not in constants.USER_DATA.keys():
             constants.USER_DATA[caller_key] = deepcopy(constants.EMPTY_USER)
         caller = constants.USER_DATA[caller_key]
 
         if user_key not in constants.USER_DATA.keys():
             constants.USER_DATA[user_key] = deepcopy(constants.EMPTY_USER)
-        user = constants.USER_DATA[user_key]
+        data = constants.USER_DATA[user_key]
 
-        if caller['rank'] <= user['rank']:
+        if caller['rank'] <= data['rank']:
             await utils.embed_send(ctx, constants.ERROR_PERMISSION_DENIED)
             return
         
