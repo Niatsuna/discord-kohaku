@@ -6,3 +6,4 @@ services:
     restart: on-failure
     environment:
       - BOT_TOKEN
+      - FIREBASE_CREDENTIALS
