@@ -14,7 +14,7 @@ class Help(commands.Cog):
     def __init__(self, client):
         self.client = client
         self.cmds = {}
-        self.footer = {'text' : 'Parameters : <...> | Optional Parameters : (<...>) | List of parameters : [<...>]'}
+        self.footer = {'text' : 'v{} | Parameters : <...> | Optional Parameters : (<...>) | List of parameters : [<...>]'.format(constants.VERSION)}
 
     def help_default(self):
         return [utils.embed_create(title='**Under Construction**', description='Either Nia forgot this embed, this embed is still under construction or something went terribly wrong ewe.'), None]
@@ -23,9 +23,9 @@ class Help(commands.Cog):
         title='Kohaku'
         description = 'Wasshoi~!\n Type `{}help <command>` to see more details about  a particular command.'.format(constants.INVOKE)
         fields = [ [None, False],
-            [':clipboard: General', '`help`,`status`, `server`, `ping`, `gif`', False],
-            [':scroll: Game Information', '`animalcrossing`, `deadbydaylight`, `finalfantasyxiv`, `fategrandorder`, `genshinimpact`, `pokemon`', True],
-            [':game_die: Games', '`magic8ball`, `neverhaveiever`, `wouldyourather`, `rockpaperscissors`', True],
+            [':clipboard: General', '`help`,`status`, `server`, `ping`, `gif`, `edit`', False],
+            [':scroll: Game Information', '`animalcrossing`', True],
+            [':game_die: Games', '`magic8ball`, `neverhaveiever`, `wouldyourather`, `rockpaperscissors`, `love`, `roll`', True],
             [None, False],
             [':gear: Source', '[Spaghetti code]({}), [Upcoming Features]({})'.format(constants.GITHUB_URL_CODE, constants.GITHUB_URL_BOARD), False]
         ]
