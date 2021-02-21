@@ -42,7 +42,7 @@ class Love(commands.Cog):
     @love.error
     async def love_error(self,ctx, error):
         if isinstance(error, commands.MissingRequiredArgument):
-            await self.ping(ctx, param=str(ctx.message.author.id))
+            await self.love(ctx, param=str(ctx.message.author.id))
             return
 
 
