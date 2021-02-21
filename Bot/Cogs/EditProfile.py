@@ -30,11 +30,12 @@ class EditProfile(commands.Cog):
     @commands.command(pass_context=True, name='edit-profile', aliases=ALIASES)
     async def editProfile(self, ctx, *, param):
         aspects = param.split('|')
-        db_path = 'users/{}'.format(ctx.message.author.id)
-        data = constants.FIRE_CON.get(db_path)
-        if data == None:
+
+        caller_key = str(ctx.message.author.id)
+        if caller_key in constants.USER_DATA.keys():
+            data = constants.USER_DATA[caller_key]
+        else:
             data = constants.EMPTY_USER
-            constants.FIRE_CON.setValue(db_path, data)
         success = []
         failed = []
         for asp in aspects:
@@ -53,7 +54,7 @@ class EditProfile(commands.Cog):
                         success.append(aspect)
             else:
                 failed.append(aspect)
-        constants.FIRE_CON.update(db_path, data)
+        constants.USER_DATA[caller_key] = data
         if len(failed) == 0:
             await utils.embed_send(ctx, utils.embed_create(title='Update profile : Success', description='{}\'s profile was updated successfully!'.format(ctx.message.author.mention)))
         else:

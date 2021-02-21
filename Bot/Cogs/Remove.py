@@ -7,7 +7,7 @@ import Bot.Backend.checks as checks
 import Bot.Backend.constants as constants
 import Bot.Backend.utils as utils
 
-ALIASES = ['rem']
+ALIASES = ['rem', 'del']
 LISTS = ['gif', 'emote', 'moderator', 'admin', 'owner']
 
 # > ---------------------------------------------------------------------------

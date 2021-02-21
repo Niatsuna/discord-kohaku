@@ -41,10 +41,12 @@ class Status(commands.Cog):
             if user == None:
                 await utils.embed_send(ctx, utils.embed_create(title='Profile not found.', description='Couldn\'t find user with id/mention: `{}`'.format(p)))
             elif not user.bot:
-                data = constants.FIRE_CON.get('users/{}'.format(id_))
-                if data == None:
+                key = str(id_)
+                if key in constants.USER_DATA.keys():
+                    data = constants.USER_DATA[key]
+                else:
                     data = constants.EMPTY_USER
-                    constants.FIRE_CON.setValue('users/{}'.format(id_), data)
+                    constants.USER_DATA[key] = data
                 title = 'Profile: {}'.format(user.display_name)
                 thumbnail = user.avatar_url
                 lvl = utils.level(data['xp'])
