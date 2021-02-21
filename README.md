@@ -136,12 +136,12 @@ You are welcome to look around and test for yourself!
 <a name="start_usage">
 
 ### :o: Usage
-To start Kohaku you need a token from discord and your database credentials. On the default setting the command
+To start Kohaku you need a token from discord and your database credentials as env-variables. On the default setting the command
 ```python
-python3 app.py $BOT-TOKEN $FIRE_PRIVATE_KEY_ID $FIRE_PRIVATE_KEY $FIRE_CLIENT_EMAIL $FIRE_CLIENT_ID $FIRE_CLIENT_CERT_URL
+python3 app.py $BOT-TOKEN
 ```
 should start Kohaku. After that Kohaku will use the credentials to open up a connection to your firebase realtime database. Furthermore: Kohaku will store your credentials in a .json file.
-Which means: After the successful first start, you don't need to parse the credentials anymore.
+Which means: After the successful first start, you don't need to have the credentials as env-variables anymore.
 
 Kohaku will inform you on start, which cogs were successfully loaded and which not. After that your Kohaku-Instance is ready to use:
 
