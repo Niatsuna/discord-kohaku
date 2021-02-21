@@ -36,7 +36,7 @@ class AnimalCrossing(commands.Cog):
             alias = '**Aliases: ** {}\n'.format(' '.join(['`{}`'.format(x) for x in ALIASES]))
         else:
             alias = ''
-        possibilities = ['art - Shows a list of all artworks', 'fossil - Shows a list of all fossil', 'song - Shows a list of all songs']
+        possibilities = ['art - Shows a list of all artworks', 'fossil - Shows a list of all fossil', 'song - Shows a list of all songs', '<fish>/<bug>/<sea creature> - Looks up a specific critter', '<month> - Shows all critter for the month', '<song> - Looks up a specific song', '<fossil> - Looks up a specific fossil', '<villager> - Looks up a specific villager.']
         description = 'This command is connected to the game \'Animal Crossing : New Horizons\' and can show information regarding this game.\n\n{}**Usage: ** \n{}'.format(
             alias, '\n'.join(['`{}animalcrossing` {}'.format(constants.INVOKE, x) for x in possibilities]))
         return utils.embed_create(title=title, description=description, footer=footer)
