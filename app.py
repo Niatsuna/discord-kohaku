@@ -11,6 +11,7 @@ import sys
 import Bot.Backend.utils as utils
 import json
 from Bot.Backend.Firebase import Firebase
+import os
 
 # -----------------------------------------------------------------------------------------------
 # >> Variables
@@ -19,13 +20,9 @@ client = commands.Bot(command_prefix=constants.INVOKE, intents=intents)
 client.remove_command('help') # Removes default help command
 _credentials = utils.json_load('cred.json')
 try:
-    FIRE_PRIVATE_KEY_ID = sys.argv[2]
-    FIRE_PRIVATE_KEY = sys.argv[3].replace('\\n', '\n')
-    FIRE_CLIENT_ID = sys.argv[4]
-
-    _credentials['private_key_id'] = FIRE_PRIVATE_KEY_ID
-    _credentials['private_key'] = FIRE_PRIVATE_KEY
-    _credentials['client_id'] = FIRE_CLIENT_ID
+    _credentials['private_key_id'] = os.environ['FIRE_PRIVATE_KEY_ID']
+    _credentials['private_key'] = os.environ['FIRE_PRIVATE_KEY'].replace('\\n', '\n')
+    _credentials['client_id'] = os.environ['FIRE_CLIENT_ID']
 
     utils.json_store('fire_cred.json', _credentials)
 except:
