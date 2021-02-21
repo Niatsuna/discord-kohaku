@@ -30,7 +30,7 @@ class EventHandler(commands.Cog):
     def cog_unload(self):
         self.update_user_data.cancel()
 
-    @tasks.loop(minutes=10)
+    @tasks.loop(minutes=5)
     async def update_user_data(self):
         changes = False
         for (k, v) in constants.USER_DATA.items():
