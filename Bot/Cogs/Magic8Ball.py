@@ -32,7 +32,7 @@ class Magic8Ball(commands.Cog):
     @commands.command(pass_context=True, aliases=ALIASES)
     async def magic8ball(self, ctx, *, param):
         for m in ctx.message.mentions:
-            for r in ['<!@{}>'.format(m.id), '<@{}>'.format(m.id)]:
+            for r in ['<@!{}>'.format(m.id), '<@{}>'.format(m.id)]:
                 param = param.replace(r, m.display_name)
         h_param = int(hashlib.sha1(param.lower().replace(' ', '').encode('utf-8')).hexdigest(), 16)
         a_range = self.answers[h_param % 2]
