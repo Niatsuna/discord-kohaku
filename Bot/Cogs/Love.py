@@ -7,7 +7,7 @@ import Bot.Backend.constants as constants
 import Bot.Backend.utils as utils
 from random import randint
 
-ALIASES = ['<3', ':heart:']
+ALIASES = ['<3']
 
 # > ---------------------------------------------------------------------------
 class Love(commands.Cog):
@@ -29,14 +29,23 @@ class Love(commands.Cog):
 
     @commands.command(pass_context=True, aliases=ALIASES)
     async def love(self, ctx, *, param):
-        try:
-            user = self.client.get_user(int(param.replace('<', '').replace('@', '').replace('!', '').replace('>', '')))
-        except:
-            user = None
-        if user == None:
-            await utils.embed_send(ctx, constants.ERROR_SEARCH_FAIL)
-            return
-        description = ':heart: • There is a {}% chance of love between {} and {}'.format(randint(0,100), ctx.message.author.mention, user.mention)
+        param = param.replace('<', '').replace('@', '').replace('!', '').replace('>', '')
+        print(param)
+        if param != 'everyone':
+            try:
+                user = self.client.get_user(int(param.replace('<', '').replace('@', '').replace('!', '').replace('>', '')))
+            except:
+                user = None
+            if user == None:
+                await utils.embed_send(ctx, constants.ERROR_SEARCH_FAIL)
+                return
+            perc = randint(0,101)
+            if perc == 101:
+                description = ':heart: • The love between {} and {} is very strong! Their love is infinite!'.format(ctx.message.author.mention, user.mention)
+            else:
+                description = ':heart: • There is a {}% chance of love between {} and {}'.format(perc, ctx.message.author.mention, user.mention)
+        else:
+            description = ':heart: • {} loves everbody equally for at least {}%'.format(ctx.message.author.mention, randint(0,100))
         await utils.embed_send(ctx, utils.embed_create(description=description))
 
     @love.error
