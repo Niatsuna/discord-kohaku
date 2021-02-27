@@ -51,6 +51,8 @@ class EventHandler(commands.Cog):
 
     @commands.Cog.listener()
     async def on_message(self, message):
+        await self.client.wait_until_ready()
+        
         if message.author.bot:
             return
         
@@ -76,8 +78,10 @@ class EventHandler(commands.Cog):
         if data['xp'] > constants.MAX_EXP:
             data['prestige'] += 1
             data['xp'] -= constants.MAX_EXP
-        constants.USER_DATA[key] = data
+    
         now = datetime.utcnow()
+        data['timestamp'] = now.strftime(constants.TIMESTAMP_FORMAT)
+        constants.USER_DATA[key] = data
         if message.author.id in constants.TIMEOUT.keys() and now < constants.TIMEOUT[message.author.id]:
             return
         elif message.author.id in constants.TIMEOUT.keys(): # now >= constants.TIMEOUT (timeout runned out):
