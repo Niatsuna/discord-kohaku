@@ -45,7 +45,7 @@ class Love(commands.Cog):
             else:
                 description = ':heart: • There is a {}% chance of love between {} and {}'.format(perc, ctx.message.author.mention, user.mention)
         else:
-            description = ':heart: • {} loves everbody equally for at least {}%'.format(ctx.message.author.mention, randint(0,100))
+            description = ':heart: • {} loves everybody equally for at least {}%'.format(ctx.message.author.mention, randint(0,100))
         await utils.embed_send(ctx, utils.embed_create(description=description))
 
     @love.error
