@@ -42,6 +42,8 @@ class Add(commands.Cog):
         if param[0] == 'gif' or param[0] == 'emote':
             key = param[1]
             constants.FIRE_CON.setValue('{}/{}'.format(param[0], key), param[2])
+            if param[0] == 'gif':
+                constants.GIF_DATA[key] = param[2]
             await utils.embed_send(ctx, utils.embed_create(title='Added {}'.format(param[0]), description='{}, added a {} with the key `{}`.'.format(ctx.message.author.mention, param[0], param[1])))
             return
 

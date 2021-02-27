@@ -21,6 +21,11 @@ class EventHandler(commands.Cog):
             constants.FIRE_CON.setValue('users', {})
             constants.USER_DATA = {}
 
+        constants.GIF_DATA = constants.FIRE_CON.get('gif')
+        if constants.GIF_DATA == None:
+            constants.FIRE_CON.setValue('gif', {})
+            constants.GIF_DATA = {}
+
         self.prev_data = {}
         self.update_user_data.start()
 
@@ -67,6 +72,9 @@ class EventHandler(commands.Cog):
         if r_mentions or self.client.user.mentioned_in(message):
             await message.channel.send(utils.load_emote('kohaku-ping'))
 
+        for k in constants.GIF_DATA.keys():
+            if k.lower().strip() in message.content.lower().strip():
+                await message.channel.send(embed=utils.embed_create(image=constants.GIF_DATA[k]))
 
         key = str(message.author.id)
         xp_gain = random.randint(2,10)
