@@ -21,7 +21,7 @@ class EventHandler(commands.Cog):
             constants.FIRE_CON.setValue('users', {})
             constants.USER_DATA = {}
 
-        self.prev_data = deepcopy(constants.USER_DATA)
+        self.prev_data = {}
         self.update_user_data.start()
 
     def isSecret(self):
@@ -32,18 +32,18 @@ class EventHandler(commands.Cog):
 
     @tasks.loop(minutes=5)
     async def update_user_data(self):
-        changes = False
+        self.prev_data = constants.FIRE_CON.get('users')
+        now = datetime.utcnow()
         for (k, v) in constants.USER_DATA.items():
-            if (k in self.prev_data.keys() and self.prev_data[k] != constants.USER_DATA[k] ) or (k not in self.prev_data.keys()) :
-                changes = True
-                break
-        if changes:
-            utils.log('Updated Database!')
-            if constants.FIRE_CON.get('users') == None:
-                constants.FIRE_CON.setValue('users', constants.USER_DATA)
-            else:
-                constants.FIRE_CON.update('users', constants.USER_DATA)
-            self.prev_data = deepcopy(constants.USER_DATA)
+            try:
+                ts = datetime.strptime(self.prev_data[k]['timestamp'] , constants.TIMESTAMP_FORMAT)
+            except:
+                ts = None
+            if ts == None or (ts < datetime.strptime(v['timestamp'] , constants.TIMESTAMP_FORMAT)):
+                if 'timestamp' not in v.keys():
+                    v['timestamp'] = now.strftime(constants.TIMESTAMP_FORMAT)
+                constants.FIRE_CON.update('users/{}'.format(k), v)
+        utils.log('> Updated Database | {}'.format(now.strftime(constants.TIMESTAMP_FORMAT)))
 
     @update_user_data.before_loop
     async def before_update(self):
