@@ -30,7 +30,6 @@ class Love(commands.Cog):
     @commands.command(pass_context=True, aliases=ALIASES)
     async def love(self, ctx, *, param):
         param = param.replace('<', '').replace('@', '').replace('!', '').replace('>', '')
-        print(param)
         if param != 'everyone':
             try:
                 user = self.client.get_user(int(param.replace('<', '').replace('@', '').replace('!', '').replace('>', '')))
