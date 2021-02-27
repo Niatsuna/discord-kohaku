@@ -48,7 +48,8 @@ class Status(commands.Cog):
                 else:
                     data = constants.EMPTY_USER
                     constants.USER_DATA[key] = data
-                title = 'Profile: {}'.format(user.display_name)
+                mem = ctx.message.guild.get_member(id_)
+                title = 'Profile: {}'.format(user.display_name if mem == None else mem.display_name)
                 thumbnail = user.avatar_url
                 lvl = utils.level(data['xp'])
                 description = '**Level: ** {} ({}%)'.format(lvl, floor((data['xp']-utils.total_exp(lvl))/utils.total_exp(lvl+1) * 100))
