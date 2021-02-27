@@ -22,7 +22,7 @@ class Roll(commands.Cog):
             alias = '**Aliases: ** {}\n'.format(' '.join(['`{}`'.format(x) for x in ALIASES]))
         else:
             alias = ''
-        description = 'Rolls die for you.\n\n{}**Usage: ** `{}roll <amount>w<type>(*<amount>)`\n**Example: ** `{}roll 1w100*5` - rolls 1 dice from 1 to 100 and multiplies the result with 5'.format(alias, constants.INVOKE, constants.INVOKE)
+        description = 'Rolls die for you.\n\n{}**Usage: ** `{}roll <amount>w<type>(*<amount>)`\n**Caps: ** XwY*Z -> X : 500, Y : 100 , Z : 1,000,000,000\n**Example: ** `{}roll 1w100*5` - rolls 1 dice from 1 to 100 and multiplies the result with 5'.format(alias, constants.INVOKE, constants.INVOKE)
         return utils.embed_create(title=title, description=description, footer=footer)
 
     def isSecret(self):
@@ -53,14 +53,14 @@ class Roll(commands.Cog):
             await utils.embed_send(ctx, constants.ERROR_WHOOPS)
             return
 
-        if amount1 < 1 or amount1 > 500 or dice_type < 2 or amount2 < 1 or amount2 > 1000000000:
+        if amount1 < 1 or amount1 > 500 or dice_type < 1 or dice_type > 1000 or amount2 < 1 or amount2 > 1000000000:
             await utils.embed_send(ctx, constants.ERROR_WHOOPS)
             return
         
         results = []
         total = 0
         for i in range(0, amount1):
-            result = int(random.randint(1, dice_type + 1) * amount2)
+            result = int(random.randint(1, dice_type) * amount2)
             total += result
             results.append(result)
         title = '{} rolled {}w{}'.format(ctx.message.author.display_name, amount1, dice_type)
