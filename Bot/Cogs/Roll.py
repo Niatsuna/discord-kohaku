@@ -22,7 +22,7 @@ class Roll(commands.Cog):
             alias = '**Aliases: ** {}\n'.format(' '.join(['`{}`'.format(x) for x in ALIASES]))
         else:
             alias = ''
-        description = 'Rolls die for you.\n\n{}**Usage: ** `{}roll <amount>w<type>(*<amount>)`\n**Caps: ** XwY*Z -> X : 500, Y : 100 , Z : 1,000,000,000\n**Example: ** `{}roll 1w100*5` - rolls 1 dice from 1 to 100 and multiplies the result with 5'.format(alias, constants.INVOKE, constants.INVOKE)
+        description = 'Rolls die for you.\n\n{}**Usage: ** `{}roll <amount>w<type>(*<amount>)`**Example: ** `{}roll 1w100*5` - rolls 1 dice from 1 to 100 and multiplies the result with 5'.format(alias, constants.INVOKE, constants.INVOKE)
         return utils.embed_create(title=title, description=description, footer=footer)
 
     def isSecret(self):
